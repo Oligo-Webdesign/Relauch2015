@@ -28,9 +28,11 @@
 
 /* ############################################# OLIGO #### */
 html { 
+	position: relative;
   overflow-y: auto;
   overflow-x: hidden !important;
 }
+
 html, body {
     margin:           0;
     padding:          0;
@@ -41,6 +43,7 @@ html, body {
     font-family:      "thesans-light", arial, helvetica, sans-serif;
     font-size:        18px;
     line-height:      22px;
+  	overflow-x: hidden !important;
 }
 
 .logo a {
@@ -260,10 +263,11 @@ sup { text-transform: lowercase; }
 	height:     100vh;
 	width:      100vw;
 	z-index:    99;
+  -webkit-overflow-scrolling: touch;
   }
 
   .hero-sm {
-	position:   fixed;
+	position:   relative;
 	z-index:    0;
 	top:        0;
 	bottom:     0;
@@ -276,13 +280,13 @@ sup { text-transform: lowercase; }
   }
 
   .hero-sm-content {
-	position:   absolute;
+	position:   relative;
 	z-index:    1000;
-	top:        60vh;
 	background: #ededed;
 	height:     60vh;
 	width:      100vw;
-	z-index:    99;
+	z-index:    9;
+  -webkit-overflow-x-scrolling: touch;
   }
 
 /*###############################################  HERO SLIDER ####*/
