@@ -427,6 +427,7 @@ footer {
 	padding:                            25px 0;
 	background:                         #4d4c4c url(../img/arrow-up.png) no-repeat center 8px;
 	text-align:                         center;
+	z-index: 9999;
 	-webkit-border-bottom-right-radius: 8px;
 	-webkit-border-bottom-left-radius:  8px;
 	-moz-border-radius-bottomright:     8px;

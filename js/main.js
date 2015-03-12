@@ -10,12 +10,14 @@ function parallax(){
   $('.hero > div ').css('opacity',1-(scrolled*.001));
 };
 
+
 // Scroll to top
     $('.scrolltop').click(function(e)
     {
         $('html, body').animate({'scrollTop': 0}, 1500);
         e.preventDefault();
     });
+
 
 
 // Hero Slider
@@ -56,3 +58,8 @@ function parallax(){
       var $newtarget = $("#slides li:nth-child("+target+")");
       $newtarget.removeClass('buried');
       }
+
+
+    $('body').css({
+    'overflow-x': 'scroll'
+});
