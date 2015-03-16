@@ -58,6 +58,9 @@ html, body {
 	top:         12px;
 }
 
+.container {
+	width: 90%;
+}
 /* ############################################### ELEMENTS #### */
 h1, h2, h3, h4 {
 	text-transform: uppercase;
@@ -68,9 +71,8 @@ h2 { font-size: 1.6em; }
 h3 { font-size: 1.2em; }
 h4 { font-size: 1.0em; }
 
-a, 
-input,
-.form-control { z-index: 9999 !important; }
+a, input, .form-control { z-index: 9999 !important; }
+a:hover, a:focus { text-decoration: none; }
 
 form { margin:  35px 0; }
 
@@ -353,6 +355,17 @@ body::-webkit-scrollbar { display: none; }
 		margin-bottom: 10px;
 	}
 	.slider-lead p { margin-bottom: 15px; }
+/*############################################### BREADCRUMB ####*/
+
+.breadcrumb {
+	background: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.breadcrumb > li + li::before {
+    content: "> ";
+}
+
 /*############################################### FOOTER ####*/
 
 footer {
