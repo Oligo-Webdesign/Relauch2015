@@ -63,3 +63,39 @@ function parallax(){
     $('body').css({
     'overflow-x': 'scroll'
 });
+
+
+
+// Filter
+    var width = $('.filter').width();
+    $('.open').hide();
+    $('.close').click(function(){
+        $(this).parent().css('right','0');
+        $('.open').show();
+        $(this).hide();
+    });
+    $('.open').click(function(){
+        $(this).parent().css('right','-285px');
+        $('.close').show();
+        $(this).hide();
+    });
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

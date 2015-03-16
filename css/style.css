@@ -89,6 +89,12 @@ sup { text-transform: lowercase; }
 	width: 100%;
 }
 
+.btn-default { background: none; }
+	.btn-default:hover {
+		background: #a29d86;
+		color: #ededed
+	}
+
 /*############################################## SECTION-GENERAL ####*/
 .section-text {
 	background: #ededed;
@@ -188,8 +194,9 @@ sup { text-transform: lowercase; }
 	   -ms-transition:     all 0.2s ease-in-out;
 	   transition:         all 0.2s ease-in-out;
 	   position:           absolute;
-	   bottom:             60px;
+	   bottom:             50%;
 	   left:               25%;
+	   margin-bottom:      -25px;
 	}
 
 		.view:hover p,
@@ -221,12 +228,12 @@ sup { text-transform: lowercase; }
 	   -ms-filter:         "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	   filter:             alpha(opacity=0);
 	   opacity:            0;
-	   background-color:   rgba(0,0,0, 0.8);
-	   -webkit-transition: all 0.4s ease-in-out;
-	   -moz-transition:    all 0.4s ease-in-out;
-	   -o-transition:      all 0.4s ease-in-out;
-	   -ms-transition:     all 0.4s ease-in-out;
-	   transition:         all 0.4s ease-in-out;
+	   background-color:   rgba(0,0,0, 0.6);
+	   -webkit-transition: all 0.5s ease-in-out;
+	   -moz-transition:    all 0.5s ease-in-out;
+	   -o-transition:      all 0.5s ease-in-out;
+	   -ms-transition:     all 0.5s ease-in-out;
+	   transition:         all 0.5s ease-in-out;
 	}
 		.view:hover .mask {
 		   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -350,21 +357,29 @@ body::-webkit-scrollbar { display: none; }
 	font-size:  16px;
 }
 	.slider-lead h2 { 
-		text-align: center;
-		color: #ededed;
+		text-align:    center;
+		color:         #ededed;
 		margin-bottom: 10px;
 	}
 	.slider-lead p { margin-bottom: 15px; }
 /*############################################### BREADCRUMB ####*/
 
 .breadcrumb {
-	background: none;
+	background:    none;
 	border-bottom: 1px solid #ccc;
 }
+	.breadcrumb li { font-size: 16px; }
+		.breadcrumb > li + li::before { content: "> "; }
 
-.breadcrumb > li + li::before {
-    content: "> ";
+/*############################################### ACCORDION ####*/
+
+.accordion-heading {
+	text-transform: uppercase;
+	margin:         10px 0;
 }
+	.accordion-heading div h4 { text-transform: none; }
+
+.accordion-toggle { font-size: 20px; }
 
 /*############################################### FOOTER ####*/
 
@@ -452,6 +467,56 @@ footer {
 	box-shadow:                         0px 4px 6px -3px rgba(0,0,0,0.25);
 }
 
+/*############################################### SEARCH FILTER ####*/
+.filter-wrap{
+  position:   absolute;
+  top:        30px;
+  right:      -285px;
+  width:      340px;
+  transition: all .5s ease;
+  z-index:    999999;
+}
+.filter{
+	width:              295px;
+	background:         #ededed;
+	float:              right;
+	color:              #575756;
+	padding:            15px;
+	-webkit-box-shadow: -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+}
+#toggle{
+	float:              left;
+	display:            block;
+	width:              45px;
+	height:             45px;
+	background:         #ededed;
+	color:              #575756;
+	font-size:          30px;
+	padding:            5px;
+	-webkit-box-shadow: -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+}
+
+
+
+.affix-top {
+  position: relative;
+}
+
+.affix {
+  top: 120px;
+}
+
+.affix, 
+.affix-bottom {
+}
+
+.affix-bottom {
+  position: absolute;
+}
 
 /*############################################### MEDIA QUERIES ####*/
 @media only screen and (max-width : 1045px) {
@@ -509,3 +574,7 @@ footer {
 @media only screen and (max-width : 350px) {
 	h3 { font-size: 0.9em; }
 }
+
+
+
+
