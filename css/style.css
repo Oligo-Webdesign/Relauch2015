@@ -29,8 +29,8 @@
 /* ############################################# OLIGO #### */
 html { 
 	position: relative;
-  overflow-y: auto;
-  overflow-x: hidden !important;
+  	overflow-y: auto;
+  	overflow-x: hidden !important;
 }
 
 html, body {
@@ -38,7 +38,7 @@ html, body {
     padding:          0;
     width:            100%;
     height:           100%;
-    background-color: #ededed;
+    background-color: #e2e2e2;
     color:            #575756;
     font-family:      "thesans-light", arial, helvetica, sans-serif;
     font-size:        18px;
@@ -89,28 +89,53 @@ sup { text-transform: lowercase; }
 	width: 100%;
 }
 
-.btn-default { background: none; }
+.btn-default, .btn-primary { background: none; }
 	.btn-default:hover {
 		background: #a29d86;
-		color: #ededed
+		color:      #ededed;
+	}
+	.btn-primary:hover {
+		background: #fff;
+		color:      #a29d86;
+	}
+.btn-gold {
+	background: #a29d86;
+	color:      #ededed;
+}
+	.btn-gold:hover {
+		background: #96927B;
+		color:      #ededed;
 	}
 
 /*############################################## SECTION-GENERAL ####*/
 .section-text {
-	background: #ededed;
 	height:     auto;
 	min-height: 335px;
-	padding:    105px 0;
+	padding:    105px 0;background: #ffffff; /* Old browsers */
+background: #ffffff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5NCUiIHN0b3AtY29sb3I9IiNlMmUyZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #e2e2e2 94%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(94%,#e2e2e2)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#e2e2e2 94%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#e2e2e2 94%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#e2e2e2 94%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #ffffff 0%,#e2e2e2 94%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e2e2',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
 }
 	.section-text p { margin-bottom: 25px; }
 
-.section-teaser { background: #ededed; }
+.section-teaser { 
+	background: #e2e2e2;
+	padding: 0 5px;
+}
 
 /*################################################### TEASER ####*/
 .teaser {
 	height:        auto;
 	width:         100%;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 	position:      relative;
 	z-index:       99999;
 }
@@ -126,7 +151,10 @@ sup { text-transform: lowercase; }
 		z-index:  1;
 	}
 
-.teaser-lg { margin-bottom: 0; }
+.teaser-lg {
+	margin-bottom: 0;
+	padding: 0;
+}
 /*######################  TEASER - HOVER ####*/
 .view {
    float:      left;
@@ -144,13 +172,14 @@ sup { text-transform: lowercase; }
    left:     0;
 }
 	.view img {
-	   display:            block;
-	   position:           relative;
-	   -webkit-transition: all 0.2s linear;
-	   -moz-transition:    all 0.2s linear;
-	   -o-transition:      all 0.2s linear;
-	   -ms-transition:     all 0.2s linear;
-	   transition:         all 0.2s linear;
+		display:            block;
+		position:           relative;
+		-webkit-transition: all 0.6s ease-in-out;
+		-moz-transition:    all 0.6s ease-in-out;
+		-o-transition:      all 0.6s ease-in-out;
+		-ms-transition:     all 0.6s ease-in-out;
+		transition:         all 0.6s ease-in-out;
+		transition-delay:   .5s;
 	}
 		.view:hover img {
 		   -webkit-transform: scale(1.1,1.1);
@@ -162,6 +191,7 @@ sup { text-transform: lowercase; }
 	.view p {
 	   position:           relative;
 	   color:              #fff;
+	   max-width: 800px;
 	   padding:            15% 60px 20px;
 	   text-align:         left;
 	   -webkit-transform:  translateY(100px);
@@ -172,11 +202,12 @@ sup { text-transform: lowercase; }
 	   -ms-filter:         "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	   filter:             alpha(opacity=0);
 	   opacity:            0;
-	   -webkit-transition: all 0.2s linear;
-	   -moz-transition:    all 0.2s linear;
-	   -o-transition:      all 0.2s linear;
-	   -ms-transition:     all 0.2s linear;
-	   transition:         all 0.2s linear;
+	   -webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition:    all 0.2s ease-in-out;
+	   -o-transition:      all 0.2s ease-in-out;
+	   -ms-transition:     all 0.2s ease-in-out;
+	   transition:         all 0.2s ease-in-out;
+	   transition-delay:   .5s;
 	}
 	.view a.info {
 	   display:            inline-block;
@@ -185,6 +216,7 @@ sup { text-transform: lowercase; }
 	   text-transform:     uppercase;
 	   text-align:         center;
 	   width:              50%;
+	   max-width:          250px;
 	   -ms-filter:         "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	   filter:             alpha(opacity=0);
 	   opacity:            0;
@@ -193,9 +225,10 @@ sup { text-transform: lowercase; }
 	   -o-transition:      all 0.2s ease-in-out;
 	   -ms-transition:     all 0.2s ease-in-out;
 	   transition:         all 0.2s ease-in-out;
+	   transition-delay:   .4s;
 	   position:           absolute;
-	   bottom:             50%;
-	   left:               25%;
+	   bottom:             18%;
+	   right:              8%;
 	   margin-bottom:      -25px;
 	}
 
@@ -211,29 +244,32 @@ sup { text-transform: lowercase; }
 		   transform:         translateY(0px);
 		}
 		.view:hover p {
-		   -webkit-transition-delay: 0.1s;
-		   -moz-transition-delay:    0.1s;
-		   -o-transition-delay:      0.1s;
-		   -ms-transition-delay:     0.1s;
-		   transition-delay:         0.1s;
+		   -webkit-transition-delay: 0.4s;
+		   -moz-transition-delay:    0.4s;
+		   -o-transition-delay:      0.4s;
+		   -ms-transition-delay:     0.4s;
+		   transition-delay:         0.4s;
 		}
 		.view:hover a.info {
-		   -webkit-transition-delay: 0.2s;
-		   -moz-transition-delay:    0.2s;
-		   -o-transition-delay:      0.2s;
-		   -ms-transition-delay:     0.2s;
-		   transition-delay:         0.2s;
+		   -webkit-transition-delay: 0.15s;
+		   -moz-transition-delay:    0.15s;
+		   -o-transition-delay:      0.15s;
+		   -ms-transition-delay:     0.15s;
+		   transition-delay:         0.15s;
 		}
 	.view .mask {
 	   -ms-filter:         "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	   filter:             alpha(opacity=0);
 	   opacity:            0;
-	   background-color:   rgba(0,0,0, 0.6);
-	   -webkit-transition: all 0.5s ease-in-out;
-	   -moz-transition:    all 0.5s ease-in-out;
-	   -o-transition:      all 0.5s ease-in-out;
-	   -ms-transition:     all 0.5s ease-in-out;
-	   transition:         all 0.5s ease-in-out;
+	   background:         -webkit-linear-gradient(rgba(87, 87, 86, 0.45), rgba(0, 0, 0, 0.7));
+	   background:         -o-linear-gradient(rgba(87, 87, 86, 0.45), rgba(0, 0, 0, 0.7));
+	   background:         linear-gradient(rgba(87, 87, 86, 0.45), rgba(0, 0, 0, 0.7));
+	   -webkit-transition: all 1s ease-in-out;
+	   -moz-transition:    all 1s ease-in-out;
+	   -o-transition:      all 1s ease-in-out;
+	   -ms-transition:     all 1s ease-in-out;
+	   transition:         all 1s ease-in-out;
+	   transition-delay:   .5s;
 	}
 		.view:hover .mask {
 		   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -401,6 +437,8 @@ footer {
 			color:           #aca78e;
 		}
 	footer .row { padding-bottom: 25px; }
+
+	.footer-legal { font-size: 12px;	 } 
 /* ############################## SOCIAL ### */
 .social { width: 180px; }
     .social p {

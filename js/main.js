@@ -91,11 +91,3 @@ function parallax(){
 
 
 
-
-
-
-
-
-
-
-
