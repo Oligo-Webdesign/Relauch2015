@@ -80,6 +80,10 @@ function parallax(){
         $(this).hide();
     });
 
+    
+
+
+
 
 
 
