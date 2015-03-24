@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
 	<link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 
@@ -69,9 +70,8 @@
 					</div><!-- /dl-menuwrapper -->
 				</div>
 	        
-	<section class="hero-sm">
-	
-	<h1 class="logo"><a href="index.html">OLIGO Lichttechnik</a></h1>
+	<section class="hero-sm section-teaser">
+		<h1 class="logo"><a href="index.html">OLIGO Lichttechnik</a></h1>
 		<div id="slide-container">
 			<ul id="slides">
 				<li class="slide buried" style="background-image:url(img/head-overview-oligoplus.jpg);">
@@ -83,190 +83,229 @@
 		</div>
 	</section>
 
+
 	<section class="hero-sm-content">
-		    <div class="container">
+		<div class="container">
+			<div class="wrapper">
+			    <!--Breadcrumb-->
+			    <ol class="breadcrumb hidden-xs">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="einzelleuchten.html">Einzelleuchten</a></li>
+					<li class="active">OLIGO<sup>plus</sup></li>
+							</ol>
+				<div id="filter">
+					<div class="filter-wrap">
+						<div id="toggle" class="open"><i class="fa fa-times"></i></div>
+						<div id="toggle" class="close"><i class="fa fa-search"></i></div>
+						<div class="filter">
+						    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="überschriftEins">
+							      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapseEins" aria-expanded="true" aria-controls"collapseEins">
+							          Textsuche
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseEins" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="überschriftEins">
+							      <div class="panel-body">
+						    			<input type="text" class="form-control" placeholder="Textsuche">
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="überschriftZwei">
+							      <h4 class="panel-title">
+							        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZwei" aria-expanded="false" aria-controls"collapseZwei">
+							          Preis
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseZwei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftZwei">
+							      <div class="panel-body">
+							        <p>
+										<label for="amount">Preis:</label>
+										<input type="text" id="amount" disabled>
+									</p>
+									<div id="slider-price"></div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="überschriftDrei">
+							      <h4 class="panel-title">
+							        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDrei" aria-expanded="false" aria-controls"collapseDrei">
+							          Klappbarer Eintrag #3
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseDrei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftDrei">
+							      <div class="panel-body">
 
-		    <!--Breadcrumb-->
-		    <ol class="breadcrumb hidden-xs">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="einzelleuchten.html">Einzelleuchten</a></li>
-				<li class="active">OLIGO<sup>plus</sup></li>
-			</ol>
-			<div data-spy="affix-top" data-offset-top="60" data-offset-bottom="200">
-				<div class="filter-wrap">
-					<div id="toggle" class="open"><i class="fa fa-times"></i></div>
-					<div id="toggle" class="close"><i class="fa fa-search"></i></div>
-					<div class="filter">
-					    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="überschriftEins">
-						      <h4 class="panel-title">
-						        <a data-toggle="collapse" data-parent="#accordion" href="#collapseEins" aria-expanded="true" aria-controls"collapseEins">
-						          Textsuche
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseEins" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="überschriftEins">
-						      <div class="panel-body">
-					    			<input type="text" class="form-control" placeholder="Textsuche">
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="überschriftZwei">
-						      <h4 class="panel-title">
-						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZwei" aria-expanded="false" aria-controls"collapseZwei">
-						          Klappbarer Eintrag #2
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseZwei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftZwei">
-						      <div class="panel-body">
-						        Content
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="überschriftDrei">
-						      <h4 class="panel-title">
-						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDrei" aria-expanded="false" aria-controls"collapseDrei">
-						          Klappbarer Eintrag #3
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseDrei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftDrei">
-						      <div class="panel-body">
-						        content
-						      </div>
-						    </div>
-						  </div>
-						</div></div>
+									
+			    
+
+
+							      </div>
+							    </div>
+							  </div>
+							</div></div>
+					</div>
 				</div>
-			</div>
-
-				<!-- wall-lights -->
-				<div class="accordion" id="accordion" >
-				<div class="accordion-group">
-				  <div class="accordion-heading">
-				    <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne" href="#">
-				      <i class="toggle-arrow fa fa-angle-down"></i> Wandleuchten
-				    </a>
-					<div class="row section-teaser">
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Trinity</a>
+			    <!--Accordeon-->
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+						    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+						      <span class="fa fa-angle-down"></span>
+						      Wandleuchten
+						    </a>
+						    <div class="row">
+								<div class="col-sm-3 col-xs-6 ">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">Trinity</a>
+									</div>
+									<h4 class="hidden-xs">Trinity</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">Lightbook</a>
+									</div>
+									<h4 class="hidden-xs">Lightbook</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
+									</div>
+									<h4 class="hidden-xs">a little bit</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
+									</div>
+									<h4 class="hidden-xs">a little bit</h4>
+								</div>
 							</div>
-							<h4 class="hidden-xs">Trinity</h4>
+						  </h4>
 						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Lightbook</a>
+						<div id="collapseOne" class="panel-collapse collapse">
+						  <div class="panel-body">
+						    <div class="row">
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
+										<div class="mask hidden-xs">
+								            <a href="#" class="btn btn-default info">weiter</a>
+								        </div>
+								        <a href="#" class="btn btn-primary visible-xs-block">Trinity</a>
+									</div>
+									<h4 class="hidden-xs">Trinity</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
+										<div class="mask hidden-xs">
+								            <a href="#" class="btn btn-default info">weiter</a>
+								        </div>
+								        <a href="#" class="btn btn-primary visible-xs-block">Lightbook</a>
+									</div>
+									<h4 class="hidden-xs">Lightbook</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+								            <a href="#" class="btn btn-default info">weiter</a>
+								        </div>
+								        <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
+									</div>
+									<h4 class="hidden-xs">a little bit</h4>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+								            <a href="#" class="btn btn-default info">weiter</a>
+								        </div>
+								        <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
+									</div>
+									<h4 class="hidden-xs">a little bit</h4>
+								</div>
 							</div>
-							<h4 class="hidden-xs">Lightbook</h4>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
-							</div>
-							<h4 class="hidden-xs">a little bit</h4>
+						  </div>
 						</div>
 					</div>
-				  </div>
-				  <div id="collapseOne" class=" collapse">
-				    <div class="accordion-inner">
-						
-						<div class="row section-teaser">
-							<div class="col-sm-4 col-xs-6">
-								<div class="teaser view ">
-									<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
-									<div class="mask hidden-xs">
-							            <a href="#" class="btn btn-default info">weiter</a>
-							        </div>
-							        <a href="#" class="btn btn-primary visible-xs-block">Trinity</a>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+						    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						      <span class="fa fa-angle-down"></span>
+						      Tischleuchten
+						    </a>
+						    <div class="row">
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-table-glance.jpg" alt="Trinity">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">Glance</a>
+									</div>
+									<h4 class="hidden-xs">Glance</h4>
 								</div>
-								<h4 class="hidden-xs">Trinity</h4>
-							</div>
-							<div class="col-sm-4 col-xs-6">
-								<div class="teaser view ">
-									<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
-									<div class="mask hidden-xs">
-							            <a href="#" class="btn btn-default info">weiter</a>
-							        </div>
-							        <a href="#" class="btn btn-primary visible-xs-block">Lightbook</a>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-table-glance-bent.jpg" alt="Lightbook">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">Glance (gebogen)</a>
+									</div>
+									<h4 class="hidden-xs">Glance (gebogen)</h4>
 								</div>
-								<h4 class="hidden-xs">Lightbook</h4>
-							</div>
-							<div class="col-sm-4 col-xs-6">
-								<div class="teaser view ">
-									<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
-									<div class="mask hidden-xs">
-							            <a href="#" class="btn btn-default info">weiter</a>
-							        </div>
-							        <a href="#" class="btn btn-primary visible-xs-block">a little bit</a>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-table-alittlebitcolor.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">a little bit color</a>
+									</div>
+									<h4 class="hidden-xs">a little bit color</h4>
 								</div>
-								<h4 class="hidden-xs">a little bit</h4>
+								<div class="col-sm-3 col-xs-6">
+									<div class="teaser view ">
+										<img src="img/product/product-table-alittlebitcolor.jpg" alt="a little bit">
+										<div class="mask hidden-xs">
+							                <a href="#" class="btn btn-default info">weiter</a>
+							            </div>
+							            <a href="#" class="btn btn-primary visible-xs-block">a little bit color</a>
+									</div>
+									<h4 class="hidden-xs">a little bit color</h4>
+								</div>
 							</div>
+						  </h4>
 						</div>
-
-				    </div>
-				  </div>
-				</div>
-
-				<!-- Table-lights -->
-				<div class="accordion-group">
-				  <div class="accordion-heading">
-				    <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseTwo" href="#">
-				      <i class="toggle-arrow fa fa-angle-down"></i> Tischleuchten
-				    </a>
-					<div class="row section-teaser">
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-table-glance.jpg" alt="Trinity">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Glance</a>
-							</div>
-							<h4 class="hidden-xs">Glance</h4>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-table-glance-bent.jpg" alt="Lightbook">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Glance (gebogen)</a>
-							</div>
-							<h4 class="hidden-xs">Glance (gebogen)</h4>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-table-alittlebitcolor.jpg" alt="a little bit">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">a little bit color</a>
-							</div>
-							<h4 class="hidden-xs">a little bit color</h4>
-						</div>
-					</div>
-				  </div>
-				  <div id="collapseTwo" class=" collapse">
-				    <div class="accordion-inner">
-						<div class="row section-teaser">
-							<div class="col-sm-4 col-xs-6">
+						<div id="collapseTwo" class="panel-collapse collapse">
+					  <div class="panel-body">
+					    <div class="row">
+							<div class="col-sm-3 col-xs-6">
 								<div class="teaser view ">
 									<img src="img/product/product-table-trinity.jpg" alt="Trinity">
 									<div class="mask hidden-xs">
@@ -277,66 +316,87 @@
 								<h4 class="hidden-xs">Trinity</h4>
 							</div>
 						</div>
-				    </div>
-				  </div>
-				</div>
-
-				<!-- pendandt-lights -->
-				<div class="accordion-group">
-				  <div class="accordion-heading">
-				    <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseThree" href="#">
-				      Pendelleuchten
-				    </a>
-					<div class="row section-teaser">
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Decent Max</a>
-							</div>
-							<h4 class="hidden-xs">Decent Max</h4>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-pendant-glance.jpg" alt="Glance Pendelleuchte">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">Glance</a>
-							</div>
-							<h4 class="hidden-xs">Glance</h4>
-						</div>
-						<div class="col-sm-4 col-xs-6">
-							<div class="teaser view ">
-								<img src="img/product/product-pendant-lightbook.jpg" alt="a little bit">
-								<div class="mask hidden-xs">
-					                <a href="#" class="btn btn-default info">weiter</a>
-					            </div>
-					            <a href="#" class="btn btn-primary visible-xs-block">a Lightbook</a>
-							</div>
-							<h4 class="hidden-xs">Lightbook</h4>
+					  </div>
 						</div>
 					</div>
-				  </div>
-				  <div id="collapseThree" class=" collapse">
-				    <div class="accordion-inner">
-				      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				    </div>
-				  </div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+					  <h4 class="panel-title">
+					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+					      <span class="fa fa-angle-down"></span>
+					      Pendelleuchten
+					    </a>
+					    <div class="row">
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">Decent Max</a>
+								</div>
+								<h4 class="hidden-xs">Decent Max</h4>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-glance.jpg" alt="Glance Pendelleuchte">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">Glance</a>
+								</div>
+								<h4 class="hidden-xs">Glance</h4>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-lightbook.jpg" alt="a little bit">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">a Lightbook</a>
+								</div>
+								<h4 class="hidden-xs">Lightbook</h4>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-lightbook.jpg" alt="a little bit">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">a Lightbook</a>
+								</div>
+								<h4 class="hidden-xs">Lightbook</h4>
+							</div>
+						</div>
+					  </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+					  <div class="panel-body">
+					    <div class="row">
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">Decent Max</a>
+								</div>
+								<h4 class="hidden-xs">Decent Max</h4>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<div class="teaser view ">
+									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
+									<div class="mask hidden-xs">
+						                <a href="#" class="btn btn-default info">weiter</a>
+						            </div>
+						            <a href="#" class="btn btn-primary visible-xs-block">Decent Max</a>
+								</div>
+								<h4 class="hidden-xs">Decent Max</h4>
+							</div>
+					  </div>
+						</div>
+					</div>
 				</div>
-				</div>
-
-				</div> <!-- /container -->
-
-		<div class="row section-text">
-			<div class="col-md-8 col-md-offset-2">
-				<h3>Systemleuchten</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.</p>
-			</div>
-			<div class="col-md-2 col-md-offset-5 col-xs-8 col-xs-offset-2">
-				<a href="#" class="center-block btn btn-primary">weiter</a>
 			</div>
 		</div>
 		
@@ -414,11 +474,11 @@
 			</div>
 		</footer>
 	</section>
-</body>
 
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/navigation.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
 		$(function() {
@@ -427,4 +487,7 @@
 			});
 		});
 	</script>
+	<script>
+	</script>
+</body>
 </html>

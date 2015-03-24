@@ -83,6 +83,47 @@ function parallax(){
     
 
 
+// Arrow Collapse
+$('.collapse').on('shown.bs.collapse', function(){
+  $(this).parent().find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
+    }).on('hidden.bs.collapse', function(){
+    $(this).parent().find(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
+});
+
+
+
+
+// FILTER  
+  // Price
+  $(function() {
+    $( "#slider-price" ).slider({
+      range: true,
+      min: 0,
+      max: 3500,
+      values: [ 75, 3000 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "€" + ui.values[ 0 ] + " - €" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "€" + $( "#slider-price" ).slider( "values", 0 ) +
+    " - €" + $( "#slider-price" ).slider( "values", 1 ) );
+  });
+  // Price
+  $(function() {
+    $( "#slider-price" ).slider({
+      range: true,
+      min: 0,
+      max: 3500,
+      values: [ 75, 3000 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "€" + ui.values[ 0 ] + " - €" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "€" + $( "#slider-price" ).slider( "values", 0 ) +
+    " - €" + $( "#slider-price" ).slider( "values", 1 ) );
+  });
+
+
 
 
 
