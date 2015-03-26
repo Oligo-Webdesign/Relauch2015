@@ -1,3 +1,7 @@
+// Hiding Navigation
+    $("div.navbar-fixed-top").autoHidingNavbar();
+
+
 // Parallax Scrolling
     $(window).scroll(function(e){
     parallax();
@@ -124,3 +128,9 @@
           $('select[name="colorpicker-fontawesome"]').simplecolorpicker({
             theme: 'fontawesome',
           });
+
+$('#carousel-example-generic').carousel({
+  interval: 2000,
+  keyboard: true
+})
+

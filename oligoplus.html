@@ -9,66 +9,70 @@
 	<script src="js/modernizr.custom.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
 	<link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 
 <body id="#lumination-overview">
-	
-					<div id="dl-menu" class="dl-menuwrapper">
-						<button class="dl-trigger">Menü</button>
-						<ul class="dl-menu">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="#">Lösungen</a>
-								<ul class="dl-submenu">
-									<li><a href="einzelleuchten.html">Einzelleuchten</a></li>
-									<li><a href="#">Systemleuchten</a></li>
-									<li><a href="#">OLIGO<sup>plus</sup></a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Media</a>
-								<ul class="dl-submenu">
-									<li>
-										<a href="#">Living Room</a>
-									</li>
-									<li>
-										<a href="#">Wohnwelten</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Unternehmen</a>
-								<ul class="dl-submenu">
-									<li><a href="#">Kontakt</a></li>
-									<li><a href="#">Standorte</a></li>
-									<li>
-										<a href="#">Karriere</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Stellenausschreibungen</a></li>
-											<li><a href="#">Ausbildung</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Partner</a>
-								<ul class="dl-submenu">
-									<li><a href="#">TOOLBOX</a></li>
-									<li><a href="#">Professionals</a></li>
-									<li><a href="#">Händlersuche</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Shop</a>
-							</li>
-						</ul>
-					</div><!-- /dl-menuwrapper -->
-				</div>
+	<!-- Navigation -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand pull-left visible-xs" href="index.html">
+        <h1 class="logo">OLIGO Lichttechnik</h1>
+      </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-diamond hidden-xs"></i><span class="visible-xs">Home</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Lösungen</a>
+              <ul class="dropdown-menu">
+                <li><a href="einzelleuchten.html">Einzelleuchten</a></li>
+                <li><a href="#">Systemleuchten</a></li>
+                <li><a href="#">OLIGO<sup>plus</sup></a></li>
+              </ul>
+          	</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Media</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Living Room</a></li>
+                <li><a href="#">Wohnwelten</a></li>
+              </ul>
+          	</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Unternehmen</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Standorte</a></li>
+                <li><a href="#">Karriere</a></li>
+              </ul>
+          	</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b> Partner</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Toolbox</a></li>
+                <li><a href="#">Professionals</a></li>
+              </ul>
+          	</li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+      <a class="navbar-brand hidden-xs" href="index.html">
+        <h1 class="logo">OLIGO Lichttechnik</h1>
+      </a>
+      </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 	        
 	<section class="hero-sm section-teaser">
 		<h1 class="logo"><a href="index.html">OLIGO Lichttechnik</a></h1>
@@ -470,9 +474,9 @@
 								<div class="teaser view ">
 									<img src="img/product/product-table-trinity.jpg" alt="Trinity">
 									<div class="mask hidden-xs">
-						                <a href="#" class="btn btn-default info">weiter</a>
+						                <a href="detail.html" class="btn btn-default info">weiter</a>
 						            </div>
-						            <a href="#" class="btn btn-primary visible-xs-block">Trinity</a>
+						            <a href="detail.html" class="btn btn-primary visible-xs-block">Trinity</a>
 								</div>
 								<h4 class="hidden-xs">Trinity</h4>
 							</div>
@@ -639,7 +643,7 @@
 
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/navigation.js"></script>
+	<script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.simplecolorpicker.js"></script>
 	<script src="js/main.js"></script>
@@ -649,8 +653,6 @@
 				animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
 			});
 		});
-	</script>
-	<script>
 	</script>
 </body>
 </html>
