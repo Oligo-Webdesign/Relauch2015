@@ -49,6 +49,7 @@ body {
 	max-width: 2200px;
 	margin: 0 auto;
 }
+body::-webkit-scrollbar { display: none; }
 .logo {
 	background:      url(../img/logo.png) no-repeat center center;
 	background-size: contain;
@@ -166,15 +167,6 @@ input[type="checkbox"]:checked + span:before {
 	padding: 0;
 }
 
-
-#carousel-example-generic {
-	position: relative;
-}
-	#carousel-example-generic img {
-		height: auto;
-		width: 100%;  
-	}
-
 /*################################################### NAVIGATION ####*/
 .navbar-default {
     background-color: rgba(87, 87, 86, 0.7);
@@ -243,16 +235,17 @@ input[type="checkbox"]:checked + span:before {
 
 .teaser-lg {
 	width:               100%;
-	height:              0;
+	height:              auto;
 	padding-bottom:      27.272727%;
-	background:          url(../img/teaser-shop.jpg) no-repeat;
 	background-size:     cover;
 	background-position: center; /* IE fix */
 	margin:              0;
 	position:            relative;
+	display: block;
 }
 
-#lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat; background-size:     cover;}
+#lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat; background-size: cover;}
+#home .teaser-lg { background: url(../img/teaser-shop.jpg) no-repeat; background-size: cover;}
 
 svg {
 	width:     50%;
@@ -440,70 +433,78 @@ svg {
   	-webkit-overflow-x-scrolling: touch;
   }
 
-/*###############################################  HERO SLIDER ####*/
-body::-webkit-scrollbar { display: none; }
-
-#slide-container { 
-	position:         absolute;
-	top:              0px;
-	left:             0px;
-	width:            100%; 
-	height:           100%;
-	background-color: #000;
+/*############################################### SLIDER ####*/
+.carousel {
+	position: relative;
 }
-	#slides {
-		position: absolute;
-		width:    100%;
-		height:   100%;
-		overflow: hidden;
-		padding:  0px;
-		margin:   0px;
-	}
-		.slide {
-			list-style:          none;
-			position:            absolute;
-			width:               100%;
-			height:              100%;
-			opacity:             1.0;
-			background-size:     cover;
-			background-position: 25% center;
-			transition:          all 1s linear; -webkit-transition: all 1s linear;
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+
+.carousel-inner {
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.carousel-control {
+    bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    left: auto;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    top: 90%;
+    width: 10%;
+}
+	.carousel-fade .carousel-control { z-index: 2; }
+		.carousel-control.left { background-image: none; }
+		.carousel-control.right {
+		    background-image: none;
+		    left: auto;
+		    right: 0;
 		}
 
-.buried {
-	opacity:    0.0;
-	visibility: hidden;
+#arrow-left {
+	right: 12%;
+}
+#arrow-right {
+	right: 2%;
 }
 
-.slider-nav { 
-	padding:    8px;
-	position:   fixed; 
-	z-index:    99; 
-	bottom:     5%; 
-	cursor:     pointer; 
-	color:      #ededed; 
-	opacity:    0.4; 
-	transition: all 0.66s ease; -webkit-transition: all 0.66s ease;
-	font-size:  30px;
-}
-	.slider-nav:hover { opacity:1.0; }
-	#arrow-left { right: 20px; }
-	#arrow-right { right: 40px; }
+.carousel-fade { background: #000; }
+    .carousel-fade .item {
+		opacity:    0;
+		transition: opacity 1.2s ease-in-out;
+    }
 
-.slider-lead {
-	width:      300px;
-	position:   absolute;
-	bottom:     35%;
-	right:      10%;
-	color:      #ededed;
-	font-size:  16px;
+    .carousel-fade .active { opacity: 1; }
+		.carousel-fade .active.left,
+		.carousel-fade .active.right {
+		  left: 0;
+		  opacity: 0;
+		  z-index: 1;
+		}
+		.carousel-fade .next.left, .carousel-fade .prev.right { opacity: 1; }
+
+#carousel-impression img{
+	width: 100%;
 }
-	.slider-lead h2 { 
-		text-align:    center;
-		color:         #ededed;
-		margin-bottom: 10px;
-	}
-	.slider-lead p { margin-bottom: 15px; }
+ 
 /*############################################### BREADCRUMB ####*/
 
 .breadcrumb {
@@ -760,13 +761,20 @@ box-shadow: -1px 1px 2px 0px rgba(87,87,86,0.35);
 		}
 
 /*############################################### PAGE - DETAIL ####*/
-.section-detail .content-right {
-	padding: 20% 0 0 25px;
-}
+.section-detail .content-right { padding: 20% 0 0 25px; }
 
-.section-detail section {
-	margin-bottom: 25px;
-}
+.section-detail section { margin-bottom: 25px; }
+
+.section-feature { padding: 6% 4% 15%; }
+	.section-feature h4 { margin: 3px 0 15px; }
+	.feature-dark a {
+		color: #ededed;
+		font-family: 'thesans-semilight';
+	}
+		.feature-dark a:hover { color: #fff; }
+
+.feature-dark p { color: #ededed; }
+
 
 /*############################################### MEDIA QUERIES ####*/
 @media only screen and (max-width : 1045px) {
@@ -789,13 +797,6 @@ box-shadow: -1px 1px 2px 0px rgba(87,87,86,0.35);
 		height: 17px;
 		right:  10px;
 	}
-	/* SLIDER */	
-	.slider-lead {
-		bottom:     5%;
-		right:      20%;
-		font-size:  14px;
-	}
-		.slider-lead h2 { font-size: 20px; }
 
 	.section-text {
 		padding:     50px 8px;
@@ -805,13 +806,16 @@ box-shadow: -1px 1px 2px 0px rgba(87,87,86,0.35);
 	}
 		.section-text p { margin-bottom: 15px; }
 
-	.wrapper {
-    	margin: 0 auto;
+	.wrapper { margin: 0 auto; }
+
+	.hero { position: relative; }
+
+	.content { 
+		position: relative;
+		top: 15px;
 	}
 
-	.section-detail .content-left img {
-		width: 50%;
-	}
+	.section-detail .content-left img { width: 50%; }
 
 	/* FOOTER */
 	footer { text-align: center; }
@@ -831,7 +835,21 @@ box-shadow: -1px 1px 2px 0px rgba(87,87,86,0.35);
 
 @media only screen and (max-width : 350px) {
 	h3 { font-size: 0.9em; }
+
+	.carousel-control { top: 80%; }
+		#arrow-left { right: 16%; }
+		#arrow-right { right: 2%; }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

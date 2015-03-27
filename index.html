@@ -75,39 +75,44 @@
     </div>
 
 	<section class="hero">
-		<div id="slide-container">
-			<ul id="slides">
-				<li class="slide buried" style="background-image:url(img/head-einzelleuchten.jpg);">
-					<div class="slider-lead">
-						<h2>Einzelleuchten</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						</p>
-						<a href="einzelleuchten.html" class="btn btn-primary">mehr</a>
-					</div>
-				</li>
-				<li class="slide buried" style="background-image:url(img/head-oligoplus.jpg);">
-					<div class="slider-lead">
-						<h2>Oligo<sup>plus</sup></h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						</p>
-						<a href="#" class="btn btn-primary">mehr</a>
-					</div>
-				</li>
-				<li class="slide buried" style="background-image:url(img/head-systemleuchten.jpg);">
-					<div class="slider-lead">
-						<h2>Systemleuchten</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						</p>
-						<a href="#" class="btn btn-primary">mehr</a>
-					</div>
-				</li>
-			</ul>
-			<span class="slider-nav" id="arrow-left">></span>
-			<span class="slider-nav" id="arrow-right"><</span>
-		</div>
+
+        <div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel">
+
+          <!-- Verpackung für die Elemente -->
+             <div class="carousel-inner">
+		        <div class="item active">
+		            <!-- Set the first background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/head-einzelleuchten.jpg');"></div>
+		            <div class="carousel-caption">
+		                <h2>Caption 1</h2>
+		            </div>
+		        </div>
+		        <div class="item">
+		            <!-- Set the second background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/head-systemleuchten.jpg');"></div>
+		            <div class="carousel-caption">
+		                <h2>Caption 2</h2>
+		            </div>
+		        </div>
+		        <div class="item">
+		            <!-- Set the third background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/head-oligoplus.jpg');"></div>
+		            <div class="carousel-caption">
+		                <h2>Caption 3</h2>
+		            </div>
+		        </div>
+		    </div>
+
+          <!-- Schalter -->
+          <a id="arrow-left" class="left carousel-control" href="#carousel-hero" role="button" data-slide="prev">
+            <i class="fa fa-angle-left fa-2x"></i>
+            <span class="sr-only">Zurück</span>
+          </a>
+          <a id="arrow-right" class="right carousel-control" href="#carousel-hero" role="button" data-slide="next">
+            <i class="fa fa-angle-right fa-2x"></i>
+            <span class="sr-only">Weiter</span>
+          </a>
+        </div>
 	</section>
 
 

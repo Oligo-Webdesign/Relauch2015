@@ -13,7 +13,7 @@
 	<link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 
-<body id="home">
+<body id="detail">
 	<!-- Navigation -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -75,36 +75,36 @@
     </div>
 	<!-- Header -->
 	<section class="hero">
-		<div id="slide-container">
-			<ul id="slides">
-				<li class="slide buried" style="background-image:url(img/detail/trinity-table-head-01.jpg);">
-					<div class="slider-lead">
-						<h2>TRINITY</h2>
-						<p>
-							Tischleuchte
-						</p>
-					</div>
-				</li>
-				<li class="slide buried" style="background-image:url(img/detail/trinity-table-head-02.jpg);">
-					<div class="slider-lead">
-						<h2>TRINITY</h2>
-						<p>
-							Tischleuchte
-						</p>
-					</div>
-				</li>
-				<li class="slide buried" style="background-image:url(img/detail/trinity-table-head-03.jpg);">
-					<div class="slider-lead">
-						<h2>TRINITY</h2>
-						<p>
-							Tischleuchte
-						</p>
-					</div>
-				</li>
-			</ul>
-			<span class="slider-nav" id="arrow-left">></span>
-			<span class="slider-nav" id="arrow-right"><</span>
-		</div>
+
+        <div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel">
+
+          <!-- Verpackung für die Elemente -->
+             <div class="carousel-inner">
+		        <div class="item active">
+		            <!-- Set the first background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/detail/trinity-table-head-01.jpg');"></div>
+		        </div>
+		        <div class="item">
+		            <!-- Set the second background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/detail/trinity-table-head-02.jpg');"></div>
+		        </div>
+		        <div class="item">
+		            <!-- Set the third background image using inline CSS below. -->
+		            <div class="fill" style="background-image:url('img/detail/trinity-table-head-03.jpg');"></div>
+		        </div>
+		    </div>
+
+          <!-- Schalter -->
+          <a id="arrow-left" class="left carousel-control" href="#carousel-hero" role="button" data-slide="prev">
+            <i class="fa fa-angle-left fa-2x"></i>
+            <span class="sr-only">Zurück</span>
+          </a>
+          <a id="arrow-right" class="right carousel-control" href="#carousel-hero" role="button" data-slide="next">
+            <i class="fa fa-angle-right fa-2x"></i>
+            <span class="sr-only">Weiter</span>
+          </a>
+        </div>
+
 	</section>
 
 	<!-- Content -->
@@ -158,15 +158,12 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Positionsanzeiger -->
+				<div id="carousel-impression" class="carousel slide carousel-fade" data-ride="carousel">
 				  <ol class="carousel-indicators">
-				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-impression" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-impression" data-slide-to="1"></li>
+				    <li data-target="#carousel-impression" data-slide-to="2"></li>
 				  </ol>
-
-				  <!-- Verpackung für die Elemente -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item active">
 				      	<img class="img-responsive center-block" src="img/detail/trinity-table-impression-01.jpg" alt="">
@@ -178,32 +175,65 @@
 				      	<img class="img-responsive center-block" src="img/detail/trinity-table-impression-03.jpg" alt="">
 				    </div>
 				  </div>
-
-				  <!-- Schalter -->
-				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				  <a id="arrow-left" class="left carousel-control" href="#carousel-impression" role="button" data-slide="prev">
 				    <i class="fa fa-angle-left fa-2x"></i>
 				    <span class="sr-only">Zurück</span>
 				  </a>
-				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				  <a id="arrow-right" class="right carousel-control" href="#carousel-impression" role="button" data-slide="next">
 				    <i class="fa fa-angle-right fa-2x"></i>
 				    <span class="sr-only">Weiter</span>
 				  </a>
 				</div>
 			</div>
-			<div class="col-md-2 col-md-offset-5 col-xs-8 col-xs-offset-2">
-				<a href="#" class="center-block btn btn-primary btn-gold">Jetzt einkaufen</a>
+		</div>
+
+		<div class="row section-feature teaser-lg" style="background-image:url('img/detail/trinity-table-section-01.png');">
+			<div class="col-xs-6 col-xs-offset-6">
+				<h3>Licht ist Magie</h3>
+				<h4>Gestensteuerung</h4>
+				<p class="hidden-xs">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
+				</p>
+				<a href="#">mehr zur OLIGO-Gestensteuerung ></a>
 			</div>
 		</div>
 
-		<div class="row section-teaser">
-			<div class="col-md-8 col-md-offset-2">
-				<h3>Der Oligo Shop</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.</p>
-			</div>
-			<div class="col-md-2 col-md-offset-5 col-xs-8 col-xs-offset-2">
-				<a href="#" class="center-block btn btn-primary btn-gold">Jetzt einkaufen</a>
+		<div class="row section-feature teaser-lg feature-dark" style="background-image:url('img/detail/trinity-table-section-02.png');">
+			<div class="col-xs-6">
+				<h3>Lorem ipsum dolor</h3>
+				<h4>Drehbare Lichtsegmente</h4>
+				<p class="hidden-xs">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
+				</p>
+				<a href="#">Erfahren Sie mehr zu drehbaren Leuchtensegmenten ></a>
 			</div>
 		</div>
+
+		<div class="row section-feature teaser-lg" style="background-image:url('img/detail/trinity-table-section-03.png');">
+			<div class="col-xs-6 col-xs-offset-6">
+				<h3>Licht bis ins Detail</h3>
+				<h4>Innovative Prismatik</h4>
+				<p class="hidden-xs">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
+				</p>
+				<a href="#">Mehr zur LED-Prismatik von Oligo ></a>
+			</div>
+		</div>
+
+		<div class="row section-text">
+			<div class="col-md-8 col-md-offset-2">
+				<h3>Trinity - Tischleuchte</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<a href="" class="btn btn-default btn-gold">Jetzt kaufen</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
 		<!-- Footer -->
 		<footer>
 			<div class="row">
