@@ -1,3 +1,17 @@
+ $(document).ready(
+  function() {
+    $("html").niceScroll({
+      scrollspeed:100,
+      mousescrollstep: 100,
+      cursorborder: "none",
+      cursorcolor: "none",
+      bouncescroll: true
+    });
+  }
+);
+
+
+
 // Hiding Navigation
     $("div.navbar-fixed-top").autoHidingNavbar();
 
@@ -13,16 +27,12 @@
             $('.hero > div ').css('opacity',1-(scrolled*.001));
     };
 
+
 // Scroll to top
     $('.scrolltop').click(function(e)
     {
       $('html, body').animate({'scrollTop': 0}, 1500);
       e.preventDefault();
-    });
-
-// Overflow
-    $('body').css({
-      'overflow-x': 'scroll'
     });
 
 // Arrow Collapse
@@ -33,18 +43,20 @@
     });
 
 // FILTER  
-    var width = $('.filter').width();
-    $('.open').hide();
-    $('.close').click(function(){
-        $(this).parent().css('right','0');
-        $('.open').show();
-        $(this).hide();
-    });
-    $('.open').click(function(){
-        $(this).parent().css('right','-285px');
-        $('.close').show();
-        $(this).hide();
-    });
+$(".close").click(function () {
+
+    // Set the effect type
+    var effect = 'slide';
+
+    // Set the options for the effect type chosen
+    var options = { direction: "right" };
+
+    // Set the duration (default: 400 milliseconds)
+    var duration = 500;
+
+    $('.filter').toggle(effect, options, duration);
+    $('#toggle > i').removeClass('fa-times').addClass('fa-search');
+});
       // Price
           $(function() {
             $( "#slider-price" ).slider({
@@ -103,4 +115,8 @@ $('#carousel-impression').carousel({
 });
 
 
-
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(300).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});

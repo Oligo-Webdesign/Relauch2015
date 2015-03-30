@@ -30,7 +30,6 @@
 html { 
 	position: relative;
   	overflow-y: auto;
-  	overflow-x: hidden !important;
 }
 
 html, body {
@@ -43,10 +42,8 @@ html, body {
     font-family:      "thesans-light", arial, helvetica, sans-serif;
     font-size:        18px;
     line-height:      22px;
-  	overflow-x: hidden !important;
 }
 body {
-	max-width: 2200px;
 	margin: 0 auto;
 }
 body::-webkit-scrollbar { display: none; }
@@ -175,7 +172,7 @@ input[type="checkbox"]:checked + span:before {
 }
 	.navbar-default .navbar-nav > li > a { color: #ededed; }
 		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-		    background-color: rgba(87, 87, 86, 0.2);
+		    background-color: rgba(87, 87, 86, 0.0);
 		    color: #ededed;
 		}
 	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: #fff; }
@@ -188,7 +185,11 @@ input[type="checkbox"]:checked + span:before {
 	    color: #fff;
 	    margin-left: 10px;
 	}
-	.navbar-nav > li > .dropdown-menu { background-color: rgba(87, 87, 86, 0.7); }
+	.navbar-nav > li > .dropdown-menu { 
+		background-color: rgba(87, 87, 86, 0.7);
+		margin-top:       15px;
+		z-index: -1;
+	}
 		.navbar-nav > li > .dropdown-menu a {
 		    color:     #fff;
 		    font-size: 16px;
@@ -213,6 +214,10 @@ input[type="checkbox"]:checked + span:before {
 	}
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background-color: rgba(87, 87, 86, 0.2); }
 
+
+.navbar-collapse.collapse {
+    padding: 15px 0;
+}
 /*################################################### TEASER ####*/
 .teaser {
 	height:        auto;
@@ -235,8 +240,7 @@ input[type="checkbox"]:checked + span:before {
 
 .teaser-lg {
 	width:               100%;
-	height:              auto;
-	padding-bottom:      27.272727%;
+	height:              450px;
 	background-size:     cover;
 	background-position: center; /* IE fix */
 	margin:              0;
@@ -406,9 +410,9 @@ svg {
 	top:        100vh;
 	background: #ededed;
 	height:     100vh;
-	width:      100vw;
+	width:      100%;
 	z-index:    99;
-  -webkit-overflow-scrolling: touch;
+  	-webkit-overflow-scrolling: touch;
   }
 
   .hero-sm {
@@ -638,8 +642,8 @@ footer {
 /*############################################### SEARCH FILTER ####*/
 .filter-wrap{
   position:   absolute;
-  top:        25px;
-  right:      -285px;
+  top:        20px;
+  right:      0;
   width:      340px;
   transition: all .5s ease;
   z-index:    999999;
@@ -654,6 +658,18 @@ footer {
 	-webkit-border-bottom-left-radius: 8px;
 	-moz-border-radius-bottomleft:     8px;
 	border-bottom-left-radius:         8px;
+	position:                          absolute;
+	top:                               48px;
+	right:                             0;
+	-webkit-box-shadow:                -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:                   -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:                        -1px 1px 2px 0px rgba(50, 50, 50, 0.5);
+	-webkit-border-top-left-radius:    8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-topleft:        8px;
+	-moz-border-radius-bottomleft:     8px;
+	border-top-left-radius:            8px;
+	display: none;
 }
 
 #toggle{
@@ -661,6 +677,8 @@ footer {
 	display:                           block;
 	width:                             45px;
 	height:                            45px;
+	position:                          absolute;
+	right:                             0;
 	background:                        #ededed;
 	color:                             #575756;
 	font-size:                         30px;
