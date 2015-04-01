@@ -11,18 +11,6 @@
 );
 
 
-
- 
-
-
-$('ul.nav li.dropdown').hover(function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(300).fadeIn(500);
-}, function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-});
-
-
-
 // Hiding Navigation
     $("div.navbar-fixed-top").autoHidingNavbar();
 
@@ -33,7 +21,7 @@ $('ul.nav li.dropdown').hover(function() {
     });
     function parallax(){
         var scrolled = $(window).scrollTop();
-            $('.hero').css('top',-(scrolled*0.0215)+'rem');
+            $('.hero').css('top',-(scrolled*0.0200)+'rem');
             $('.hero > div').css('top',-(scrolled*-0.005)+'rem');
             $('.hero > div ').css('opacity',1-(scrolled*.001));
     };
@@ -66,7 +54,6 @@ $(".close").click(function () {
     var duration = 500;
 
     $('.filter').toggle(effect, options, duration);
-    $('#toggle > i').removeClass('fa-times').addClass('fa-search');
 });
       // Price
           $(function() {
@@ -123,11 +110,4 @@ $('#carousel-hero').carousel({
 $('#carousel-impression').carousel({
   interval: 4000,
   keyboard: true
-});
-
-
-$('ul.nav li.dropdown').hover(function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(300).fadeIn(500);
-}, function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
