@@ -51,22 +51,22 @@
   var ClsMutationObserver = window.MutationObserver || window.WebKitMutationObserver || false;
 
   var _globaloptions = {
-    zindex: "auto",
+    zindex: "-5",
     cursoropacitymin: 0,
     cursoropacitymax: 1,
     cursorcolor: "#424242",
-    cursorwidth: "5px",
+    cursorwidth: "0",
     cursorborder: "1px solid #fff",
     cursorborderradius: "5px",
     scrollspeed: 60,
     mousescrollstep: 8 * 3,
-    touchbehavior: false,
+    touchbehavior: true,
     hwacceleration: true,
     usetransition: true,
     boxzoom: false,
     dblclickzoom: true,
     gesturezoom: true,
-    grabcursorenabled: true,
+    grabcursorenabled: false,
     autohidemode: true,
     background: "",
     iframeautoresize: true,
@@ -933,7 +933,7 @@
             railh.css({
               position: "fixed",
               left: "0px",
-              width: "100%"
+              width: "0"
             });
             (railh.align) ? railh.css({
               bottom: "0px"
