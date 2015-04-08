@@ -330,7 +330,7 @@
     this.visibility = true;
     this.railslocked = false;  // locked by resize
     this.locked = false;  // prevent lost of locked status sets by user
-    this.hidden = false; // rails always hidden
+    this.hidden = true; // rails always hidden
     this.cursoractive = true; // user can interact with cursors
 
     this.wheelprevented = false; //prevent mousewheel event

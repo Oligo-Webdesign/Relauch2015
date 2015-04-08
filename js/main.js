@@ -41,6 +41,18 @@
         $(this).parent().find(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
     });
 
+
+$(document).ready(function(){
+    var r=0, dir=true;
+    $(".slidein").click(function() {
+        dir = !dir;
+        r = dir? -280 : 0;
+        $(this).stop().animate({right: r+'px'}, 800);
+    });
+});
+
+
+
 // FILTER  
 $(".close").click(function () {
 
