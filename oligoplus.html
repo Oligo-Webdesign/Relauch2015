@@ -14,7 +14,7 @@
 </head>
 
 <body id="#lumination-overview">
-	<!-- Navigation -->
+<!-- Navigation -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -36,29 +36,46 @@
               <ul class="dropdown-menu">
                 <li><a href="einzelleuchten.html">Einzelleuchten</a></li>
                 <li><a href="#">Systemleuchten</a></li>
-                <li><a href="#">OLIGO<sup>plus</sup></a></li>
+                <li><a href="oligoplus.html">OLIGO<sup>plus</sup> Kollektion</a></li>
               </ul>
           	</li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inspiration</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Living Room</a></li>
-                <li><a href="#">Wohnwelten</a></li>
+                <li><a href="#">Wohnraum</a></li>
+                <li><a href="#">Projekte</a></li>
+                <li><a href="#">3D Möglichkeiten</a></li>
+                <li><a href="#">Ratgeber</a></li>
               </ul>
           	</li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Unternehmen</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Digital</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Printmedien</a></li>
+                <li><a href="#">Produktdaten</a></li>
+                <li><a href="#">Lichtplanung</a></li>
+                <li><a href="#">Montagehinweise</a></li>
+                <li><a href="#">Gebrauchsanleitung</a></li>
+              </ul>
+          	</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Ihre Ansprechpartner</a></li>
+                <li><a href="#">Presse</a></li>
+                <li><a href="#">Aktuelles</a></li>
+                <li><a href="#">Bezugspunkte</a></li>
+                <li><a href="#">Bestellen</a></li>
+              </ul>
+          	</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Über OLIGO</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Woran wir glauben</a></li>
+                <li><a href="#">Geschäftsbereiche</a></li>
                 <li><a href="#">Standorte</a></li>
+                <li><a href="#">Auszeichnungen</a></li>
                 <li><a href="#">Karriere</a></li>
-              </ul>
-          	</li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partner</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Toolbox</a></li>
-                <li><a href="#">Professionals</a></li>
               </ul>
           	</li>
             <li><a href="#">Shop</a></li>
@@ -98,226 +115,230 @@
 					<li><a href="einzelleuchten.html">Einzelleuchten</a></li>
 					<li class="active">OLIGO<sup>plus</sup></li>
 				</ol>
-			    <!-- Filter -->
-				<div id="filter">
-					<div class="filter-wrap">
-						<div id="toggle" class="close"><i class="fa fa-search"></i></div>
-						<div class="filter">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-								<!--Textsuche-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="filter-price">
-										<h4 class="panel-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#collapseEins" aria-expanded="true" aria-controls"collapseEins">
-						      					<span class="fa fa-angle-down"></span>
-												Textsuche
-											</a>
-										</h4>
-									</div>
-									<div id="collapseEins" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="filter-price">
-										<div class="panel-body">
-											<p>Hier können Sie einen Suchbegriff oder eine Artikelnummer eingeben.</p>
-											<input type="text" class="form-textsearch form-control" placeholder="Suchbegriff oder Artikelnr.">
-										</div>
-									</div>
-								</div>
-								<!--Preis-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschriftZwei">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZwei" aria-expanded="false" aria-controls"collapseZwei">
-						      					<span class="fa fa-angle-down"></span>
-												Preis
-											</a>
-										</h4>
-									</div>
-									<div id="collapseZwei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftZwei">
-										<div class="panel-body">
-											<p>
-												<label for="price">Preis:</label>
-												<input type="text" id="price" disabled>
-											</p>
-											<div id="slider-price"></div>
-										</div>
-									</div>
-								</div>
-								<!--Farbe-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschrift5">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls"collapse5">
-						      					<span class="fa fa-angle-down"></span>
-												Farbe
-											</a>
-										</h4>
-									</div>
-									<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift5">
-										<div class="panel-body">
-											<p>
-												Wählen Sie hier Ihre bevorzugte Farbe:
-											</p>
-											<select name="colorpicker-fontawesome">
-												<option value="#7bd148">Green</option>
-												<option value="#5484ed">Bold blue</option>
-												<option value="#a4bdfc">Blue</option>
-												<option value="#46d6db">Turquoise</option>
-												<option value="#7ae7bf">Light green</option>
-												<option value="#51b749">Bold green</option>
-												<option value="#fbd75b">Yellow</option>
-												<option value="#ffb878">Orange</option>
-												<option value="#ff887c">Red</option>
-												<option value="#dc2127">Bold red</option>
-												<option value="#dbadff">Purple</option>
-												<option value="#575756">Silver</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<!--Lichtfarbe-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschriftDrei">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDrei" aria-expanded="false" aria-controls"collapseDrei">
-						      					<span class="fa fa-angle-down"></span>
-												Lichtfarbe
-											</a>
-										</h4>
-									</div>
-									<div id="collapseDrei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftDrei">
-										<div class="panel-body">
-											<p>
-												Die Lichtfarbe wird in Kelvin (K) bemessen und bewegt sich zwischen 1000K (warm) und 10.000K (kalt)
-											</p>
-											<p>
-												<label for="lightcolor">Kelvin:</label>
-												<input type="text" id="lightcolor" disabled>
-											</p>
-											<div id="slider-lightcolor"></div>
-										</div>
-									</div>
-								</div>
-								<!--Lichtleistung-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschriftVier">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseVier" aria-expanded="false" aria-controls"collapseVier">
-						      					<span class="fa fa-angle-down"></span>
-												Lichtleistung
-											</a>
-										</h4>
-									</div>
-									<div id="collapseVier" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftVier">
-										<div class="panel-body">
-											<p>
-												Die Leistung wird in Lumen (lm) bemessen und bewegt sich zwischen 100lm (schwach) und 5500lm (stark)
-											</p>
-											<p>
-												<label for="lightPower">Lumen:</label>
-												<input type="text" id="lightPower" disabled>
-											</p>
-											<div id="slider-lightPower"></div>
-										</div>
-									</div>
-								</div>
-								<!--Leuchtmittel-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschrift6">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls"collapse6">
-						      					<span class="fa fa-angle-down"></span>
-												Leuchtmittel
-											</a>
-										</h4>
-									</div>
-									<div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift6">
-										<div class="panel-body">
-											<p>
-												Wählen Sie hier Ihr bevorzugtes Leuchtmittel:
-											</p>
-											<form class="form-inline">
-												<div class="form-group">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox"> 
-															<span>LED</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>Halogen</span>
-														</label>
+		<a href="#0" class="cd-btn"><i class="fa fa-search"></i></a>
+
+				
+				<div class="cd-panel from-right">
+
+					<div class="cd-panel-container">
+					<header class="cd-panel-header">
+						<h3>Suchfilter</h3>
+						<a href="#0" class="cd-panel-close">schließen</i></a>
+					</header>
+						<div class="cd-panel-content">
+										<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+											<!--Textsuche-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="filter-price">
+													<h4 class="panel-title">
+														<a data-toggle="collapse" data-parent="#accordion" href="#collapseEins" aria-expanded="true" aria-controls"collapseEins">
+									      					<span class="fa fa-angle-down"></span>
+															Textsuche
+														</a>
+													</h4>
+												</div>
+												<div id="collapseEins" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="filter-price">
+													<div class="panel-body">
+														<p>Hier können Sie einen Suchbegriff oder eine Artikelnummer eingeben.</p>
+														<input type="text" class="form-textsearch form-control" placeholder="Suchbegriff oder Artikelnummer">
 													</div>
 												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-								<!--Lichtverteilung-->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="überschrift7">
-										<h4 class="panel-title">
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls"collapse6">
-						      					<span class="fa fa-angle-down"></span>
-												Lichtverteilung
-											</a>
-										</h4>
-									</div>
-									<div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift7">
-										<div class="panel-body">
-											<p>
-												Wählen Sie aus, in welche Richtungen die Leuchte strahlen soll:
-											</p>
-											<form class="">
-												<div class="form-group">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox"> 
-															<span>unten</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>oben</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>seitlich</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>oben &amp; unten</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>oben, unten &amp; seitlich</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>alle Richtungen</span>
-														</label>
+											</div>
+											<!--Preis-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschriftZwei">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZwei" aria-expanded="false" aria-controls"collapseZwei">
+									      					<span class="fa fa-angle-down"></span>
+															Preis
+														</a>
+													</h4>
+												</div>
+												<div id="collapseZwei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftZwei">
+													<div class="panel-body">
+														<p>
+															<label for="price">Preis:</label>
+															<input type="text" id="price" disabled>
+														</p>
+														<div id="slider-price"></div>
 													</div>
 												</div>
-											</form>
+											</div>
+											<!--Farbe-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschrift5">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls"collapse5">
+									      					<span class="fa fa-angle-down"></span>
+															Farbe
+														</a>
+													</h4>
+												</div>
+												<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift5">
+													<div class="panel-body">
+														<p>
+															Wählen Sie hier Ihre bevorzugte Farbe:
+														</p>
+														<select name="colorpicker-fontawesome">
+															<option value="#7bd148">Green</option>
+															<option value="#5484ed">Bold blue</option>
+															<option value="#a4bdfc">Blue</option>
+															<option value="#46d6db">Turquoise</option>
+															<option value="#7ae7bf">Light green</option>
+															<option value="#51b749">Bold green</option>
+															<option value="#fbd75b">Yellow</option>
+															<option value="#ffb878">Orange</option>
+															<option value="#ff887c">Red</option>
+															<option value="#dc2127">Bold red</option>
+															<option value="#dbadff">Purple</option>
+															<option value="#575756">Silver</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<!--Lichtfarbe-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschriftDrei">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDrei" aria-expanded="false" aria-controls"collapseDrei">
+									      					<span class="fa fa-angle-down"></span>
+															Lichtfarbe
+														</a>
+													</h4>
+												</div>
+												<div id="collapseDrei" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftDrei">
+													<div class="panel-body">
+														<p>
+															Die Lichtfarbe wird in Kelvin (K) bemessen und bewegt sich zwischen 1000K (warm) und 10.000K (kalt)
+														</p>
+														<p>
+															<label for="lightcolor">Kelvin:</label>
+															<input type="text" id="lightcolor" disabled>
+														</p>
+														<div id="slider-lightcolor"></div>
+													</div>
+												</div>
+											</div>
+											<!--Lichtleistung-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschriftVier">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseVier" aria-expanded="false" aria-controls"collapseVier">
+									      					<span class="fa fa-angle-down"></span>
+															Lichtleistung
+														</a>
+													</h4>
+												</div>
+												<div id="collapseVier" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschriftVier">
+													<div class="panel-body">
+														<p>
+															Die Leistung wird in Lumen (lm) bemessen und bewegt sich zwischen 100lm (schwach) und 5500lm (stark)
+														</p>
+														<p>
+															<label for="lightPower">Lumen:</label>
+															<input type="text" id="lightPower" disabled>
+														</p>
+														<div id="slider-lightPower"></div>
+													</div>
+												</div>
+											</div>
+											<!--Leuchtmittel-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschrift6">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls"collapse6">
+									      					<span class="fa fa-angle-down"></span>
+															Leuchtmittel
+														</a>
+													</h4>
+												</div>
+												<div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift6">
+													<div class="panel-body">
+														<p>
+															Wählen Sie hier Ihr bevorzugtes Leuchtmittel:
+														</p>
+														<form class="form-inline">
+															<div class="form-group">
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox"> 
+																		<span>LED</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>Halogen</span>
+																	</label>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+											<!--Lichtverteilung-->
+											<div class="panel panel-default">
+												<div class="panel-heading" role="tab" id="überschrift7">
+													<h4 class="panel-title">
+														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls"collapse6">
+									      					<span class="fa fa-angle-down"></span>
+															Lichtverteilung
+														</a>
+													</h4>
+												</div>
+												<div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="überschrift7">
+													<div class="panel-body">
+														<p>
+															Wählen Sie aus, in welche Richtungen die Leuchte strahlen soll:
+														</p>
+														<form class="">
+															<div class="form-group">
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox"> 
+																		<span>unten</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>oben</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>seitlich</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>oben &amp; unten</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>oben, unten &amp; seitlich</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox">
+																		<span>alle Richtungen</span>
+																	</label>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-									<button class="btn btn-default">suchen</button>
-						</div>
-					</div>
-				</div>
-<div class="slidein">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
-</div>
+										<button class="btn btn-default">suchen</button>
+						</div> <!-- cd-panel-content -->
+					</div> <!-- cd-panel-container -->
+				</div> <!-- cd-panel -->
 
 
 			    <!--Accordeon-->
@@ -328,14 +349,14 @@
 						    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
 						      <span class="more fa fa-angle-down"></span>
 						      Wandleuchten
-						      <span class="more hvr-underline-from-center hidden-xs">mehr anzeigen</span>
+						      <span class="more hidden-xs">Übersicht</span>
 						    </a>
 						    <div class="row">
 								<div class="col-sm-3 col-xs-6 ">
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">Trinity</a>
 									</a>
@@ -345,7 +366,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">Lightbook</a>
 									</a>
@@ -355,7 +376,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">a little bit</a>
 									</a>
@@ -363,13 +384,13 @@
 								</div>
 								<div class="col-sm-3 col-xs-6">
 									<a href="#" class="teaser view ">
-										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
+										<img src="img/product/product-wall-grace.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">a little bit</a>
 									</a>
-									<h4 class="hidden-xs">a little bit</h4>
+									<h4 class="hidden-xs">Grace unlimited</h4>
 								</div>
 							</div>
 						  </h4>
@@ -381,7 +402,7 @@
 									<div class="teaser view ">
 										<img src="img/product/product-wall-trinity.jpg" alt="Trinity">
 										<div class="mask hidden-xs">
-								            <a href="#" class="btn-lnk info">weiter</a>
+                        				<p class="btn info">weiter <span>></span></p>
 								        </div>
 								        <a href="#" class="btn-lnk visible-xs-block">Trinity</a>
 									</div>
@@ -391,7 +412,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-lightbook.jpg" alt="Lightbook">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 								        </div>
 								        <a href="#" class="btn-lnk visible-xs-block">Lightbook</a>
 									</a>
@@ -401,7 +422,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 								        </div>
 								        <a href="#" class="btn-lnk visible-xs-block">a little bit</a>
 									</a>
@@ -411,7 +432,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-wall-alittlebit.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 								        </div>
 								        <a href="#" class="btn-lnk visible-xs-block">a little bit</a>
 									</a>
@@ -427,14 +448,14 @@
 						    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 						      <span class="more fa fa-angle-down"></span>
 						      Tischleuchten
-						      <span class="more hvr-underline-from-center hidden-xs">mehr anzeigen</span>
+						      <span class="more hidden-xs">Übersicht</span>
 						    </a>
 						    <div class="row">
 								<div class="col-sm-3 col-xs-6">
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-table-glance.jpg" alt="Trinity">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">Glance</a>
 									</a>
@@ -444,7 +465,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-table-glance-bent.jpg" alt="Lightbook">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">Glance (gebogen)</a>
 									</a>
@@ -454,7 +475,7 @@
 									<a href="#" class="teaser view ">
 										<img src="img/product/product-table-alittlebitcolor.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 							            <a href="#" class="btn-lnk visible-xs-block">a little bit color</a>
 									</a>
@@ -462,13 +483,13 @@
 								</div>
 								<div class="col-sm-3 col-xs-6">
 									<a href="#" class="teaser view ">
-										<img src="img/product/product-table-alittlebitcolor.jpg" alt="a little bit">
+										<img src="img/product/product-table-grace.jpg" alt="a little bit">
 										<div class="mask hidden-xs">
-                        					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
-							            <a href="#" class="btn-lnk visible-xs-block">a little bit color</a>
+							            <a href="#" class="btn-lnk visible-xs-block">Grace</a>
 									</a>
-									<h4 class="hidden-xs">a little bit color</h4>
+									<h4 class="hidden-xs">Grace</h4>
 								</div>
 							</div>
 						  </h4>
@@ -480,7 +501,7 @@
 								<a href="trinity-tischleuchte.html" class="teaser view ">
 									<img src="img/product/product-table-trinity.jpg" alt="Trinity">
 										<div class="mask hidden-xs">
-	                        				<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 							            </div>
 						            <a href="trinity-tischleuchte.html" class="btn-lnk visible-xs-block">Trinity</a>
 								</a>
@@ -496,14 +517,14 @@
 					    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 								<span class="more fa fa-angle-down"></span>
 					      Pendelleuchten
-								<span class="more hvr-underline-from-center hidden-xs">mehr anzeigen</span>
+								<span class="more hidden-xs">Übersicht</span>
 					    </a>
 					    <div class="row">
 							<div class="col-sm-3 col-xs-6">
 								<a href="#" class="teaser view ">
 									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
 						            <a href="#" class="btn-lnk visible-xs-block">Decent Max</a>
 								</a>
@@ -513,7 +534,7 @@
 								<a href="#" class="teaser view ">
 									<img src="img/product/product-pendant-glance.jpg" alt="Glance Pendelleuchte">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
 						            <a href="#" class="btn-lnk visible-xs-block">Glance</a>
 								</a>
@@ -523,7 +544,7 @@
 								<a href="#" class="teaser view ">
 									<img src="img/product/product-pendant-lightbook.jpg" alt="a little bit">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
 						            <a href="#" class="btn-lnk visible-xs-block">a Lightbook</a>
 								</a>
@@ -531,13 +552,13 @@
 							</div>
 							<div class="col-sm-3 col-xs-6">
 								<a href="#" class="teaser view ">
-									<img src="img/product/product-pendant-lightbook.jpg" alt="a little bit">
+									<img src="img/product/product-pendant-palaeo.jpg" alt="a little bit">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
-						            <a href="#" class="btn-lnk visible-xs-block">a Lightbook</a>
+						            <a href="#" class="btn-lnk visible-xs-block">Paläo</a>
 								</a>
-								<h4 class="hidden-xs">Lightbook</h4>
+								<h4 class="hidden-xs">Paläo</h4>
 							</div>
 						</div>
 					  </h4>
@@ -549,7 +570,7 @@
 								<a href="#" class="teaser view ">
 									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
 						            <a href="#" class="btn-lnk visible-xs-block">Decent Max</a>
 								</a>
@@ -559,7 +580,7 @@
 								<a href="#" class="teaser view ">
 									<img src="img/product/product-pendant-decentmax.jpg" alt="Decent Max Pendelleuchte">
 									<div class="mask hidden-xs">
-                    					<span class="btn info">weiter</span>
+                        				<p class="btn info">weiter <span>></span></p>
 						            </div>
 						            <a href="#" class="btn-lnk visible-xs-block">Decent Max</a>
 								</a>
@@ -575,12 +596,8 @@
 		
 		<footer>
 			<div class="row">
-				<div class="col-md-12">
 					<a href="#" class="scrolltop">oben</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-10 col-sm-offset-1">
 					<div class="col-md-2 col-sm-4 col-xs-12">
 						<h3>Lösungen</h3>
 						<ul class="hidden-xs">
@@ -590,35 +607,45 @@
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
-						<h3>Media</h3>
+						<h3>Inspiration</h3>
 						<ul class="hidden-xs">
-							<li><a href="#">Kunden</a></li>
-							<li><a href="#">Wohnwelten</a></li>
+							<li><a href="#">Wohnraum</a></li>
+							<li><a href="#">Projekte</a></li>
+							<li><a href="#">3D Möglichkeiten</a></li>
+							<li><a href="#">Ratgeber</a></li>
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-4 col-xs-12">
-						<h3>Unternehmen</h3>
+						<h3>Digital</h3>
 						<ul class="hidden-xs">
-							<li><a href="#">Kontakt</a></li>
+							<li><a href="#">Printmedien</a></li>
+							<li><a href="#">Produktdaten</a></li>
+							<li><a href="#">Lichtplanung</a></li>
+							<li><a href="#">Montagehinweise</a></li>
+							<li><a href="#">Gebrauchsanleitung</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-12">
+						<h3>Kontakt</h3>
+						<ul class="hidden-xs">
+							<li><a href="#">Ihre Ansprechpartner</a></li>
+							<li><a href="#">Presse</a></li>
+							<li><a href="#">Aktuelles</a></li>
+							<li><a href="#">Bezugspunkte</a></li>
+							<li><a href="#">Bestellen</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-12">
+						<h3>Über OLIGO</h3>
+						<ul class="hidden-xs">
+							<li><a href="#">Woran wir glauben</a></li>
+							<li><a href="#">Geschäftsbereiche</a></li>
 							<li><a href="#">Standorte</a></li>
+							<li><a href="#">Auszeichnungen</a></li>
 							<li><a href="#">Karriere</a></li>
 						</ul>
 					</div>
-					<div class="col-md-2 col-sm-4 col-xs-12">
-						<h3>Partner</h3>
-						<ul class="hidden-xs">
-							<li><a href="#">Toolbox</a></li>
-							<li><a href="#">OLIGO for Professionals</a></li>
-							<li><a href="#">Händlersuche</a></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-12">
-						<h3>Shop</h3>
-						<ul class="hidden-xs">
-							<li><a href="#">OLIGO Shop</a></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-12">
+					<div class="col-md-2 col-sm-12 col-xs-12">
 						<h3>Mehr erleben:</h3>
 						<div class="social">
 							<ul>
@@ -636,8 +663,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 col-xs-12">
-					<div class="col-md-3 col-xs-12 text-left footer-legal">
+				<div class="col-md-10 col-md-offset-1 col-xs-12">
+					<div class="col-md-4 col-xs-12 text-left footer-legal">
 						<p>&copy; OLIGO Lichttechnik GmbH</p>
 					</div>
 					<div class="col-md-3 col-xs-12 pull-right text-center footer-legal">

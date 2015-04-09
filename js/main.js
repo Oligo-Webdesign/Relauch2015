@@ -42,31 +42,21 @@
     });
 
 
-$(document).ready(function(){
-    var r=0, dir=true;
-    $(".slidein").click(function() {
-        dir = !dir;
-        r = dir? -280 : 0;
-        $(this).stop().animate({right: r+'px'}, 800);
+// FILTER
+    $(document).ready(function($){
+      //open the lateral panel
+      $('.cd-btn').on('click', function(event){
+        event.preventDefault();
+        $('.cd-panel').addClass('is-visible');
+      });
+      //close the lateral panel
+      $('.cd-panel').on('click', function(event){
+        if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+          $('.cd-panel').removeClass('is-visible');
+          event.preventDefault();
+        }
+      });
     });
-});
-
-
-
-// FILTER  
-$(".close").click(function () {
-
-    // Set the effect type
-    var effect = 'slide';
-
-    // Set the options for the effect type chosen
-    var options = { direction: "right" };
-
-    // Set the duration (default: 400 milliseconds)
-    var duration = 500;
-
-    $('.filter').toggle(effect, options, duration);
-});
       // Price
           $(function() {
             $( "#slider-price" ).slider({
