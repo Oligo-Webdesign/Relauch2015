@@ -111,7 +111,10 @@ input[type="checkbox"]:checked + span:before {
   margin-right: 5px;
 }
 /*################################################### FORMS ####*/
-.form-control { margin-bottom: 10px; }
+.form-control { 
+	margin-bottom: 10px;
+	border-radius: 0;
+}
 
 /*################################################### BUTTONS ####*/
 .btn {
@@ -204,9 +207,7 @@ input[type="checkbox"]:checked + span:before {
 		    background-color: rgba(87, 87, 86, 0.0);
 		    color:            #ededed;
 		}
-	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { 
-		color: #fff;
-	}
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: #fff; }
 	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	    background-color: rgba(87, 87, 86, 0.0);
 	    color:            #fff;
@@ -232,9 +233,6 @@ input[type="checkbox"]:checked + span:before {
 	.navbar-toggle { 
 		margin-right:          15px;
 		border:                none;
-		-webkit-border-radius: 20px;
-		-moz-border-radius:    20px;
-		border-radius:         20px;
 	}
 	.navbar-default .navbar-toggle .icon-bar { background-color: #ededed; }
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -322,28 +320,20 @@ input[type="checkbox"]:checked + span:before {
 
 .teaser-lg, .teaser-lg:hover {
 	width:               100%;
-	height:              450px;
-	background-size:     cover;
+	height:              auto;
+	padding-bottom:      27%;
+	background-size:     100% auto !important;
 	background-position: center center; /* IE fix */
 	margin:              0;
 	position:            relative;
-	display: block;
-	-webkit-box-shadow: -1px 0px 2px 0px rgba(87,87,86,0.7);
-	-moz-box-shadow:    -1px 0px 2px 0px rgba(87,87,86,0.7);
-	box-shadow:         -1px 0px 2px 0px rgba(87,87,86,0.7);
+	display:             block;
+	-webkit-box-shadow:  -1px 0px 2px 0px rgba(87,87,86,0.7);
+	-moz-box-shadow:     -1px 0px 2px 0px rgba(87,87,86,0.7);
+	box-shadow:          -1px 0px 2px 0px rgba(87,87,86,0.7);
 }
 
-#lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat; background-size: cover;}
-#home .teaser-lg { background: url(../img/teaser-shop.jpg) no-repeat center; background-size: cover;}
-
-svg {
-	width:     50%;
-	max-width: 300px;
-	height:    auto;
-	position:  absolute;
-	top:       40%;
-	left:      20%;
-}
+#lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat;}
+#home .teaser-lg { background: url(../img/teaser-shop.jpg) no-repeat;}
 /*######################  TEASER - HOVER ####*/
 .view {
    float:      left;
@@ -420,14 +410,14 @@ svg {
 	   color:              #fff;
 	}
 		.mask .info span {
-			margin-left: 5px;
-			opacity: 0;
-			font-size: 1.1em;
-	   -webkit-transition: all 0.5s ease-in-out;
-	   -moz-transition:    all 0.5s ease-in-out;
-	   -o-transition:      all 0.5s ease-in-out;
-	   -ms-transition:     all 0.5s ease-in-out;
-	   transition:         all 0.5s ease-in-out;
+			margin-left:        5px;
+			opacity:            0;
+			font-size:          1.1em;
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition:    all 0.5s ease-in-out;
+			-o-transition:      all 0.5s ease-in-out;
+			-ms-transition:     all 0.5s ease-in-out;
+			transition:         all 0.5s ease-in-out;
 		}
 			.mask .info:hover span {
 				opacity: 1;
@@ -484,7 +474,6 @@ svg {
 	width:      100vw;
 	overflow:   hidden;
 	background: #000;
-    
     &:before {
 		content:  '';
 		height:   100%;
@@ -554,7 +543,8 @@ svg {
     opacity:     0.8;
     position:    absolute;
     text-align:  center;
-    top:         94%;
+    top:         auto;
+    bottom:      25px;
     width:       50px;
     text-shadow: none;
 }
@@ -588,9 +578,7 @@ svg {
 		}
 		.carousel-fade .next.left, .carousel-fade .prev.right { opacity: 1; }
 
-#carousel-impression img{
-	width: 100%;
-}
+#carousel-impression img{ width: 100%; }
  
 /*############################################### BREADCRUMB ####*/
 
@@ -729,15 +717,14 @@ footer {
 
 /*############################################### SEARCH FILTER ####*/
 .cd-btn {
-    color: #575756;
-    display: block;
-    position: absolute;
-    right: 5%;
-    top: 22px;
-    width: 40px;
+    color:     #575756;
+    display:   block;
+    position:  absolute;
+    right:     5%;
+    top:       22px;
+    width:     40px;
     font-size: 1.5em;
 }
-	.cd-btn:hover {}
 
 .cd-panel {
   position:           fixed;
@@ -886,14 +873,6 @@ footer {
 			border-bottom: 1px solid #e2e2e2;
 		}
 
-@media only screen and (min-width: 768px) {
-  .cd-panel-content p {
-    font-size:   16px;
-    font-size:   1rem;
-    line-height: 1.6;
-  }
-}
-
 /*########################  SLIDER  ####*/
 .ui-slider { 
 	background:    #fff;
@@ -1008,9 +987,7 @@ footer {
 			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,210,0.75) 16%,rgba(255,255,191,0.69) 23%,rgba(255,255,255,0) 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 		}
-		.lightfamily a p { 
-			font-size: 0.8em;
-		}
+		.lightfamily a p { font-size: 0.8em; }
 
 .modal-content { padding: 25px; }
 .modal-dialog { z-index: 9999; }
@@ -1027,7 +1004,19 @@ footer {
 	}
 
 /*############################################### MEDIA QUERIES ####*/
+@media only screen and (min-width: 2500px) {
+	html, body, .navbar, .hero {
+		max-width: 2500px;
+		margin: 0 auto;
+	}
+}
+
 @media only screen and (max-width: 1200px) {
+	.section-text { 
+		padding: 35px 25px;
+		min-height: auto;
+	}
+	.section-teaser { padding: 0 25px; }
 	.view p { width: 90%; }
 	.view a.info { left: 25%; }
 }
@@ -1040,30 +1029,44 @@ footer {
 }
 
 @media only screen and (max-width : 895px) {
+	.logo { width: 110px; }
 	.view p { display: none; }
 		.view a.info { bottom: 35%; }
 }
 
 @media only screen and (max-width : 768px) {
 
+
+	/* FILTER */
+	.cd-panel-content p {
+		font-size:   16px;
+		font-size:   1rem;
+		line-height: 1.6;
+	}
+	#accordion { padding-top: 75px; }
+
 	.btn-default, .btn-primary {
 	    margin: 5px 0;
 	    font-size: 0.8em;
 	}
 
-	.btn-lnk:before {
-		background: #575756;
-	}
+	.btn-lnk:before { background: #575756; }
 
 	/* HEADER */
-	.logo a {
-		width:  100px;
-		height: 17px;
-		right:  10px;
+	.logo {
+		position: absolute;
+		right: 0;
 	}
+	.navbar-toggle { float: left; }
+	.nav > li { 
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+	}
+		.navbar-nav .open .dropdown-menu { text-align: center; }
+		.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse { max-height: 480px; }
 
 	.section-text {
-		padding:     50px 8px;
 		min-height:  150px;
 		font-size:   0.8em;
 		line-height: 18px;
@@ -1071,13 +1074,6 @@ footer {
 		.section-text p { margin-bottom: 15px; }
 
 	.wrapper { margin: 0 auto; }
-
-	.hero { position: relative; }
-
-	.content { 
-		position: relative;
-		top: -50vh;
-	}
 
 	.view:hover img { transform: scale(1, 1); }
 
@@ -1102,8 +1098,6 @@ footer {
 
 @media only screen and (max-width : 420px) {
 	h3 { font-size: 1em; }
-
-	.content { top: -30vh; }
 
 	.fill {
 	    background-position: center top;
