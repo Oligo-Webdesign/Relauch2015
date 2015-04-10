@@ -105,9 +105,7 @@
           });
 
 
-$('#carousel-hero').carousel({
-  interval: 2000
-});
+$('#carousel-hero').carousel({ interval: 5000 });
 
 $('#carousel-impression').carousel({
   interval: 4000,
