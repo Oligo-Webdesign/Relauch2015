@@ -1,6 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="de">
 <head>
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<meta charset="utf-8">
 	<title>OLIGOplus | OLIGO Lichttechnik GmbH</title>
 	<meta name="description" content="Das OLIGOplus Sortiment ist eine exklusive Auswahl hochwertiger Einzelleuchten, die über einen selektiven Fachhandel zu beziehen sind.">
@@ -136,11 +139,13 @@
 				<div class="cd-panel from-right">
 
 					<div class="cd-panel-container">
-					<header class="cd-panel-header">
+					<!--<header class="cd-panel-header">
 						<h3>Suchfilter</h3>
 						<a href="#0" class="cd-panel-close">schließen</i></a>
-					</header>
+					</header>-->
 						<div class="cd-panel-content">
+
+						<h3>Suchfilter</h3>
 										<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
 											<!--Textsuche-->
 											<div class="panel panel-default">
@@ -350,7 +355,13 @@
 												</div>
 											</div>
 										</div>
-										<button class="btn btn-default">suchen</button>
+										<div class="col-md-6">
+											
+						<a href="#0" class="btn btn-default cd-panel-close">schließen</i></a>
+										</div>
+										<div class="col-md-6">
+											<button class="btn btn-gold">suchen</button>
+										</div>
 						</div> <!-- cd-panel-content -->
 					</div> <!-- cd-panel-container -->
 				</div> <!-- cd-panel -->

@@ -322,18 +322,25 @@ input[type="checkbox"]:checked + span:before {
 	width:               100%;
 	height:              auto;
 	padding-bottom:      27%;
-	background-size:     100% auto !important;
-	background-position: center center; /* IE fix */
+	background-size:     cover;
+	background-position: bottom center; /* IE fix */
 	margin:              0;
 	position:            relative;
 	display:             block;
 	-webkit-box-shadow:  -1px 0px 2px 0px rgba(87,87,86,0.7);
 	-moz-box-shadow:     -1px 0px 2px 0px rgba(87,87,86,0.7);
 	box-shadow:          -1px 0px 2px 0px rgba(87,87,86,0.7);
+	background-repeat:   no-repeat;
 }
 
 #lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat;}
-#home .teaser-lg { background: url(../img/teaser-shop.jpg) no-repeat;}
+#home .teaser-lg { 
+	background:      url(../img/teaser-shop.jpg) no-repeat;
+	background-size: 100% auto;
+}
+
+#detail .teaser-lg { box-shadow: none; }
+#detail .teaser-text { padding: 25px 0 !important; }
 /*######################  TEASER - HOVER ####*/
 .view {
    float:      left;
@@ -792,13 +799,9 @@ footer {
 @media only screen and (min-width: 1170px) { .cd-panel-header { width: 100%; } }
 
 .cd-panel-close {
-  position:    absolute;
-  top:         0;
-  right:       5px;
-  height:      100%;
-  width:       90px;
+  height:      auto;
+  width:       100%;
   display:     inline-block;
-  overflow:    hidden;
   white-space: nowrap;
 }
 
@@ -946,14 +949,15 @@ footer {
 		}
 
 /*############################################### PAGE - DETAIL ####*/
-.section-detail .content-right { padding: 100px 0 0 50px; }
-.section-detail section { margin-bottom: 25px; }
-	.section-detail section .btn { 
-		width:     28%;
-		float:     left;
-		margin:    0 2% 0 0;
-		font-size: 16px;
-	}
+.section-detail { margin-bottom: 50px; }
+	.section-detail .content-right { padding: 100px 0 0 50px; }
+	.section-detail section { margin-bottom: 25px; }
+		.section-detail section .btn { 
+			width:     28%;
+			float:     left;
+			margin:    0 2% 0 0;
+			font-size: 16px;
+		}
 
 .section-feature { 
 	padding:    6% 4% 15%;
@@ -1029,14 +1033,13 @@ footer {
 }
 
 @media only screen and (max-width : 895px) {
+	.section-text { padding: 35px 0 0; }
 	.logo { width: 110px; }
 	.view p { display: none; }
 		.view a.info { bottom: 35%; }
 }
 
 @media only screen and (max-width : 768px) {
-
-
 	/* FILTER */
 	.cd-panel-content p {
 		font-size:   16px;
@@ -1044,9 +1047,10 @@ footer {
 		line-height: 1.6;
 	}
 	#accordion { padding-top: 75px; }
+	.cd-panel-content .panel-group { padding-top: 0 !important; }
 
 	.btn-default, .btn-primary {
-	    margin: 5px 0;
+	    margin:    5px 0;
 	    font-size: 0.8em;
 	}
 
@@ -1055,7 +1059,7 @@ footer {
 	/* HEADER */
 	.logo {
 		position: absolute;
-		right: 0;
+		right:    0;
 	}
 	.navbar-toggle { float: left; }
 	.nav > li { 
@@ -1072,6 +1076,10 @@ footer {
 		line-height: 18px;
 	}
 		.section-text p { margin-bottom: 15px; }
+	
+	.section-teaser { padding: 0 10px; }
+		.section-teaser div { margin-bottom: 25px; }
+			.section-teaser div:last-child { margin-bottom: 5px; }
 
 	.wrapper { margin: 0 auto; }
 
@@ -1101,8 +1109,8 @@ footer {
 
 	.fill {
 	    background-position: center top;
-	    background-size: auto 100%;
-	    background-repeat: no-repeat;
+	    background-size:     auto 100%;
+	    background-repeat:   no-repeat;
 	}
 
 	.section-feature { 
@@ -1111,6 +1119,14 @@ footer {
 	}
 
 	.btn-default, .btn-primary { font-size: 13px; }
+	.cd-panel-content .panel-group { font-size: 0.9em; }
+		.cd-panel-content p { font-size: 0.8em; }
+		.cd-panel-content .form-control { 
+			font-size: 0.9em;
+    		height: auto;
+		}
+
+	.section-feature { min-height: auto; }
 }
 
 @media only screen and (max-width : 350px) {
