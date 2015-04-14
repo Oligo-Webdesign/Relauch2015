@@ -59,6 +59,7 @@ body::-webkit-scrollbar { display: none; }
 	width: 100%;
 	padding: 0;
 }
+.container-fluid { padding: 0; }
 
 .wrapper {
 	width: 90%;
@@ -169,6 +170,11 @@ input[type="checkbox"]:checked + span:before {
 }
 
 .section-info { padding: 0; }
+.section-gallery { 
+	padding: 0 50px 100px;
+	margin-bottom: -50px;
+}
+	.section-gallery a { margin: 5%; }
 
 /*################################################### NAVIGATION ####*/
 
@@ -586,6 +592,41 @@ input[type="checkbox"]:checked + span:before {
 		.carousel-fade .next.left, .carousel-fade .prev.right { opacity: 1; }
 
 #carousel-impression img{ width: 100%; }
+
+
+#swipebox-bottom-bar, #swipebox-top-bar {
+    text-shadow: 1px 1px 1px #000;
+}
+	#swipebox-bottom-bar {
+	    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+	}
+	#swipebox-top-bar {
+	    background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+
+#swipebox-close, #swipebox-next, #swipebox-prev {
+    position: absolute;
+    right: 20px;
+}
+
+#swipebox-prev { right: 60px; }
+
+#swipebox-arrows {
+    max-width: none;
+    width: 92%;
+}
  
 /*############################################### BREADCRUMB ####*/
 

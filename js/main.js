@@ -1,4 +1,5 @@
- $(document).ready(
+// NiceScroll
+$(document).ready(
   function() {
     $("html").niceScroll({
       scrollspeed:100,
@@ -10,10 +11,8 @@
   }
 );
 
-
 // Hiding Navigation
     $("div.navbar-fixed-top").autoHidingNavbar();
-
 
 // Parallax Scrolling
     $(window).scroll(function(e){
@@ -25,7 +24,6 @@
             $('.hero > div').css('top',-(scrolled*-0.005)+'rem');
             $('.hero > div ').css('opacity',1-(scrolled*.001));
     };
-
 
 // Scroll to top
     $('.scrolltop').click(function(e)
@@ -40,7 +38,6 @@
         }).on('hidden.bs.collapse', function(){
         $(this).parent().find(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
     });
-
 
 // FILTER
     $(document).ready(function($){
