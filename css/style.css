@@ -144,7 +144,6 @@ input[type="checkbox"]:checked + span:before {
 /*############################################## SECTION-GENERAL ####*/
 .section-text {
 	height:     auto;
-	min-height: 335px;
 	padding:    105px 0;
 	background: #ffffff; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f6f6f6 24%, #e2e2e2 100%); /* FF3.6+ */
@@ -174,7 +173,19 @@ input[type="checkbox"]:checked + span:before {
 	padding: 0 50px 100px;
 	margin-bottom: -50px;
 }
-	.section-gallery a { margin: 5%; }
+	.section-gallery a { 
+		text-align: center;
+	}
+		.section-gallery a img { margin: 35px auto 0; }
+		.section-gallery a p { margin: 10px auto 0; }
+		.section-gallery a .btn { 
+			max-width: 250px;
+			margin: 10px auto 0;
+			display: block;
+		}
+
+.tab-content .row { margin: 0; }
+	.tab-content .row:first-child { margin: 25px 0 0; }
 
 /*################################################### NAVIGATION ####*/
 

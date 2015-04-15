@@ -11,6 +11,10 @@ $(document).ready(
   }
 );
 
+$(window).load(function() {
+       $('body').hide(0).fadeIn(2500)
+});
+
 // Hiding Navigation
     $("div.navbar-fixed-top").autoHidingNavbar();
 
