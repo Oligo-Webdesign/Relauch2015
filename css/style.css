@@ -66,7 +66,9 @@ body::-webkit-scrollbar { display: none; }
 	margin: 15px auto 50px;
 }
 
-.row { margin: 0; }
+.row { 
+	margin: 0;
+}
 /* ############################################### ELEMENTS #### */
 h1, h2, h3, h4 {
 	text-transform: uppercase;
@@ -77,11 +79,12 @@ h2 { font-size: 1.6em; }
 h3 { font-size: 1.2em; }
 h4 { font-size: 1.0em; }
 
-a, input, .form-control { z-index: 9999 !important; }
+a, input, .form-control { z-index: 999 !important; }
 a:hover, a:focus { text-decoration: none; }
 
 form { margin:  35px 0; }
 sup { text-transform: lowercase; }
+hr { border-color: rgba(87,87,86,.1); }
 
 input {
 	background: none;
@@ -95,7 +98,7 @@ input[type="checkbox"] { display:none !important; }
 input[type="checkbox"] + span:before {
   position:                relative;
   top:                     1px;
-  margin-right:            7px;
+  margin-right:            10px;
   display:                 inline-block;
   font-family:             'FontAwesome' !important;
   font-size:               18px;
@@ -109,7 +112,7 @@ input[type="checkbox"] + span:before { content: "\f096" !important; }
 
 input[type="checkbox"]:checked + span:before {
   content:  "\f046" !important; /* check */
-  margin-right: 5px;
+  margin-right: 8px;
 }
 /*################################################### FORMS ####*/
 .form-control { 
@@ -184,8 +187,29 @@ input[type="checkbox"]:checked + span:before {
 			display: block;
 		}
 
+
+.tab-content { 
+	padding: 15px 15px 25px;
+	background: rgba(255,255,255,0.3);
+}
 .tab-content .row { margin: 0; }
 	.tab-content .row:first-child { margin: 25px 0 0; }
+.media { margin-top: 25px; }
+	.media-body a { font-size: 0.8em; color: #575756; }
+		.media-body a:hover { color: #a29d86; }
+		.media-body a i { margin-right: 8px; }
+	.media-body .checkbox label { padding-left: 4px; }
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	background-color: rgba(255, 255, 255, 0.3);
+	border: none;
+	-webkit-box-shadow: 0px -1px 4px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -1px 4px -4px rgba(0,0,0,0.75);
+	box-shadow: 0px -1px 4px -4px rgba(0,0,0,0.75);
+}
+
+.compare h3, .compare h4 { margin-bottom: 15px; }
+.compare li { margin-bottom: 5px; }
 
 /*################################################### NAVIGATION ####*/
 
@@ -519,28 +543,7 @@ input[type="checkbox"]:checked + span:before {
   	-webkit-overflow-scrolling: touch;
   }
 
-  .hero-sm {
-	position:   fixed;
-	z-index:    0;
-	top:        0;
-	bottom:     0;
-	left:       0;
-	right:      0;
-	height:     65%;
-	width:      100vw;
-	overflow:   hidden;
-	background: #000;
-  }
-
-  .hero-sm-content {
-	position:                     absolute;
-	z-index:                      1000;
-	height:                       100vh;
-	top:                          100vh;
-	width:                        100vw;
-	z-index:                      9;
-	-webkit-overflow-x-scrolling: touch;
-  }
+  #no-hero .content { top: 70px; }
 
   .container-accordion { background: #e2e2e2; }
 
