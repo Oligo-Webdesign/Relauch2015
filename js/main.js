@@ -11,8 +11,8 @@ $(document).ready(
   }
 );
 
-$(window).load(function() {
-       $('body').hide(0).fadeIn(2500)
+$(document).ready(function (){
+  $('body').css('opacity', '0').fadeTo(1500, 1,'swing'); 
 });
 
 // Hiding Navigation

@@ -90,6 +90,7 @@ input {
 	background: none;
 	border: none;
 	color: #575756;
+	outline: none;
 }
 
 input[type="checkbox"] { display:none !important; }
@@ -109,11 +110,45 @@ input[type="checkbox"] + span:before {
 #filter label { margin-right: 15px; }
 
 input[type="checkbox"] + span:before { content: "\f096" !important; }
-
 input[type="checkbox"]:checked + span:before {
   content:  "\f046" !important; /* check */
   margin-right: 8px;
 }
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family:        inherit;
+	font-size:          100%;
+}
+input::-webkit-search-decoration, input::-webkit-search-cancel-button { display: none; }
+
+
+#nav-search { margin: 0; }
+input[type=search] {
+	background:            url(../img/fa-search.png) no-repeat 8px 9px;
+	padding:               5px 10px 5px 22px;
+	width:                 15px;
+	-webkit-border-radius: 10em;
+	-moz-border-radius:    10em;
+	border-radius:         10em;
+	-webkit-transition:    all .5s;
+	-moz-transition:       all .5s;
+	transition:            all .5s;
+	color:                 #575756;
+	margin:                8px 0 0 8px;
+	cursor:                pointer;
+}
+	#nav-search input[type=search]:focus {
+		width:            100%;
+		max-width:        350px;
+		background-color: #fff;
+		padding-left:     32px;
+	}
+	#nav-search input[type=search]:hover, #nav-search input[type=search]:focus { background-position: 8px -17px; }
+	#nav-search input[type=search]:hover { background-color: #fff; }
+	#nav-search input:-moz-placeholder { color: #fff; }
+	#nav-search input::-webkit-input-placeholder { color: #fff; }
 /*################################################### FORMS ####*/
 .form-control { 
 	margin-bottom: 10px;
@@ -124,6 +159,7 @@ input[type="checkbox"]:checked + span:before {
 .btn {
 	border-radius: 0;
 	width: 100%;
+	font-size: 0.8em;
 }
 
 .btn-default, .btn-primary { background: none; }
@@ -325,7 +361,6 @@ input[type="checkbox"]:checked + span:before {
   0% { opacity:0; -ms-transform:  translate(0px,-90px)  scaleY(0.00) ; }
   100% { opacity:1; -ms-transform:  translate(0px,0px)  scaleY(1.00) ; }
 }
-
 /*################################################### TEASER ####*/
 .teaser {
 	height:             auto;
@@ -363,7 +398,6 @@ input[type="checkbox"]:checked + span:before {
 	width:               100%;
 	height:              auto;
 	padding-bottom:      27%;
-	background-size:     cover;
 	background-position: bottom center; /* IE fix */
 	margin:              0;
 	position:            relative;
@@ -374,7 +408,11 @@ input[type="checkbox"]:checked + span:before {
 	background-repeat:   no-repeat;
 }
 
-#lumination-overview .teaser-lg { background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat;}
+#lumination-overview .teaser-lg { 
+	background: url(../img/teaser-lg-systemleuchten.jpg) no-repeat;
+	background-size: cover;
+	margin-top: 25px;
+}
 #home .teaser-lg { 
 	background:      url(../img/teaser-shop.jpg) no-repeat;
 	background-size: 100% auto;
@@ -1094,6 +1132,17 @@ footer {
 		.view a.info { bottom: 35%; }
 }
 
+@media only screen and (min-width : 768px) and (max-width : 1055px) { 
+	.navbar-right li {
+		position: absolute;
+	    top:         0;
+	    left:        50%;
+	    margin-left: -12%;
+	}
+	.nav > li:last-child { width: 140px; }
+	.navbar-collapse.collapse { padding: 40px 0 5px; }
+}
+
 @media only screen and (max-width : 768px) {
 	/* FILTER */
 	.cd-panel-content p {
@@ -1191,9 +1240,6 @@ footer {
 		#arrow-left { right: 16%; }
 		#arrow-right { right: 2%; }
 }
-
-
-
 
 
 
