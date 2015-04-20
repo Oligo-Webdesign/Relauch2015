@@ -58,20 +58,6 @@ $(document).ready(function (){
         }
       });
     });
-      // Price
-          $(function() {
-            $( "#slider-price" ).slider({
-              range: true,
-              min: 0,
-              max: 3500,
-              values: [ 0, 500 ],
-                slide: function( event, ui ) {
-                    $( "#price" ).val( "€" + ui.values[ 0 ] + " - €" + ui.values[ 1 ] );
-                }
-            });
-            $( "#price" ).val( "€" + $( "#slider-price" ).slider( "values", 0 ) +
-            " - €" + $( "#slider-price" ).slider( "values", 1 ) );
-          });
       // Lightcolor
           $(function() {
             $( "#slider-lightcolor" ).slider({
