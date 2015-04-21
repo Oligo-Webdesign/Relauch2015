@@ -11,9 +11,7 @@ $(document).ready(
   }
 );
 
-$(document).ready(function (){
-  $('body').css('opacity', '0').fadeTo(1500, 1,'swing'); 
-});
+    $("body").addClass("load");
 
 // Hiding Navigation
     $("div.navbar-fixed-top").autoHidingNavbar();
@@ -43,54 +41,6 @@ $(document).ready(function (){
         $(this).parent().find(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
     });
 
-// FILTER
-    $(document).ready(function($){
-      //open the lateral panel
-      $('.cd-btn').on('click', function(event){
-        event.preventDefault();
-        $('.cd-panel').addClass('is-visible');
-      });
-      //close the lateral panel
-      $('.cd-panel').on('click', function(event){
-        if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
-          $('.cd-panel').removeClass('is-visible');
-          event.preventDefault();
-        }
-      });
-    });
-      // Lightcolor
-          $(function() {
-            $( "#slider-lightcolor" ).slider({
-              range: true,
-              min: 1000,
-              max: 10000,
-              values: [ 1000, 2000 ],
-                slide: function( event, ui ) {
-                    $( "#lightcolor" ).val( "K" + ui.values[ 0 ] + " - K" + ui.values[ 1 ] );
-                }
-            });
-            $( "#lightcolor" ).val( "K" + $( "#slider-lightcolor" ).slider( "values", 0 ) +
-            " - K" + $( "#slider-lightcolor" ).slider( "values", 1 ) );
-          });
-      // LightPower
-          $(function() {
-            $( "#slider-lightPower" ).slider({
-              range: true,
-              min: 100,
-              max: 5500,
-              values: [ 100, 1000 ],
-                slide: function( event, ui ) {
-                    $( "#lightPower" ).val( "lm" + ui.values[ 0 ] + " - lm" + ui.values[ 1 ] );
-                }
-            });
-            $( "#lightPower" ).val( "lm" + $( "#slider-lightPower" ).slider( "values", 0 ) +
-            " - lm" + $( "#slider-lightPower" ).slider( "values", 1 ) );
-          });
-      // Color Picker
-          $('select[name="colorpicker-fontawesome"]').simplecolorpicker({
-            theme: 'fontawesome',
-          });
-
 
 $('#carousel-hero').carousel({ interval: 5000 });
 
@@ -98,3 +48,5 @@ $('#carousel-impression').carousel({
   interval: 4000,
   keyboard: true
 });
+
+$('#carousel-static').carousel({ interval: 6000 });
